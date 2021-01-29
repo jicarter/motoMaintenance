@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jordan Carter",
+      "email": "jordan.carter.0023@gmail.com"
+    },
+    {
+      "email": "jojoBaggins@user.net",
+      "name": "jojo Baggins",
+      "id": 2
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "userId": "1",
+      "make": "Yamaha",
+      "model": "YZ 250",
+      "year": "2010",
+      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
+      "timestamp": 1611932810734
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "make": "Suzuki",
+      "model": "RM 250",
+      "year": "2004",
+      "notes": "REbuild 10 hrs ago",
+      "timestamp": 1611857305886
+    }
+  ],
+  "maintenance": []
+}
