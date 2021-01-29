@@ -1,0 +1,51 @@
+.home {
+   
+    text-align: center;
+    background-position-x: center;
+    background-image: url(/src/Components/images/homeBackground.jpg);
+    z-index: 1;
+    min-height: 65rem;
+    min-width: 45rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    background-color: lightgray;
+  }
+
+  .container {
+    
+    
+  }
+
+  .title {
+    color: #ec0b87;
+    font-family: "Permanent Marker", cursive;
+    font-size: 100px;
+    line-height: 1.5;
+    margin-left: 40%;
+    text-decoration: underline;
+    
+  }
+  .slogan {
+    color:#c60bec;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-left: 40%;
+    text-decoration: underline;
+   
+  }
+
+  .intro {
+    color:#c60bec;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-left: 40%;
+    text-decoration: underline;
+    margin-top: 10%;
+    margin-bottom: 50%;
+  }
+
+  

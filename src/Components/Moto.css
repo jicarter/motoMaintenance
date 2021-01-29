@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+body,
+button,
+input,
+select,
+textarea {
+  background: rgba(204, 204, 204, 0.5);
+  font-family: "Permanent Marker", cursive;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #ec0b87;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+h2 {
+  color:#2f0335;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+
