@@ -4,12 +4,19 @@ import "./Vehicle.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const VehicleDetail = () => {
-  const { getVehicleById } = useContext(VehicleContext)
+  const { getVehicleById, deleteVehicle } = useContext(VehicleContext)
 
 	const [vehicle, setVehicle] = useState({})
 
 	const {vehicleId} = useParams();
 	const history = useHistory();
+
+  const handleDelete = () => {
+    deleteVehicle(vehicle.id)
+      .then(() => {
+        history.push("/vehicles")
+      })
+  }
 
   useEffect(() => {
     console.log("useEffect", vehicleId)
@@ -25,7 +32,7 @@ export const VehicleDetail = () => {
       <div className="vehicle__notes">{vehicle.notes}</div>
       <button className='edit__vehicle' onClick={() => {
             history.push(`/vehicles/edit/${vehicleId}`)}}>Edit Vehicle</button>
-        
+       <button onClick={ handleDelete }>DELETE Vehicle</button>  
     </section>
   )
 }

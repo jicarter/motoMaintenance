@@ -1,10 +1,12 @@
 import React, { useState, createContext } from "react"
 
+
 export const VehicleContext = createContext()
 
 export const VehicleProvider = (props) => {
     const [vehicles, setVehicles] = useState([])
 
+    
     const getVehicles = () => {
         return fetch("http://localhost:8088/vehicles")
         .then(res => res.json())
@@ -25,6 +27,12 @@ export const VehicleProvider = (props) => {
         return fetch(`http://localhost:8088/vehicles/${id}`)
             .then(res => res.json())
     }
+    const deleteVehicle = vehicleId => {
+        return fetch(`http://localhost:8088/vehicles/${vehicleId}`, {
+            method: "DELETE"
+        })
+            .then(getVehicles)
+    }
     const updateVehicle = vehicle => {
         return fetch(`http://localhost:8088/vehicles/${vehicle.id}`, {
           method: "PUT",
@@ -35,10 +43,12 @@ export const VehicleProvider = (props) => {
         })
           .then(getVehicles)
       }
+
+      
    
     return (
         <VehicleContext.Provider value={{
-            vehicles, getVehicles, addVehicle, getVehicleById, updateVehicle
+            vehicles, getVehicles, addVehicle, getVehicleById, updateVehicle, deleteVehicle, 
         }}>
             {props.children}
         </VehicleContext.Provider>

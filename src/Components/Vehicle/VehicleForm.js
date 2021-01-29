@@ -14,7 +14,7 @@ export const VehicleForm = () => {
       const history = useHistory();
   
       const handleControlledInputChange = (event) => {
-        const newVehicle = { ...vehicle }
+      const newVehicle = { ...vehicle }
 
 
           newVehicle[event.target.id] = event.target.value

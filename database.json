@@ -19,16 +19,25 @@
       "model": "YZ 250",
       "year": "2010",
       "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1611932810734
+      "timestamp": 1611951465303
     },
     {
-      "id": 2,
       "userId": "1",
       "make": "Suzuki",
       "model": "RM 250",
       "year": "2004",
-      "notes": "REbuild 10 hrs ago",
-      "timestamp": 1611857305886
+      "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
+      "timestamp": 1611944006363,
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "make": "Kawasaki",
+      "model": "KLX 300",
+      "year": "2021",
+      "notes": "Brand New",
+      "timestamp": 1611944111442,
+      "id": 3
     }
   ],
   "maintenance": []

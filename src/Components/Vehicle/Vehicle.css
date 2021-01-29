@@ -20,6 +20,7 @@
       border: 2px solid rgb(245, 28, 173);
       max-width: 25%;
       background-color: lightgray;
+     
       
     
   }
@@ -35,4 +36,15 @@
 
   .addBtn {
       color:rgb(243, 10, 10);
+  }
+
+  .root {
+    background-position-x: center;
+    background-image: url(vehicleBackground.jpg);
+    z-index: 1;
+    min-height: 65rem;
+    min-width: 45rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
