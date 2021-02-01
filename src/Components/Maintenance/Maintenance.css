@@ -1,5 +1,5 @@
 .maintenance {
-   
+    
     text-align: center;
     background-position-x: center;
     background-image: url(maintenanceBackground.webp);
@@ -49,6 +49,7 @@
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
+   
   }
 
   .form-group-vehicle {

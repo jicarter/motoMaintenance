@@ -82,6 +82,30 @@
       "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
       "timeStamp": 1612213519898,
       "id": 18
+    },
+    {
+      "userId": "1",
+      "vehicleId": "10",
+      "toComplete": "Oil Change",
+      "requiredItems": "oil",
+      "timeStamp": 1612216064452,
+      "id": 19
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Oil Change",
+      "requiredItems": "oil",
+      "timeStamp": 1612216770798,
+      "id": 20
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Air filter",
+      "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
+      "timeStamp": 1612216807328,
+      "id": 21
     }
   ]
 }

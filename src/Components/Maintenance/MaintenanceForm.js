@@ -86,9 +86,9 @@ export const MaintenanceForm = () => {
                   <label htmlFor="vehicle">Assign to vehicle: </label>
                   <select  name="vehicleId" id="vehicleId" onChange={handleControlledInputChange} className="form-control" >
                       <option value="0">Select a vehicle</option>
-                      {vehicles.map(l => (
-                          <option key={l.id} value={l.id}>
-                          {l.year} {l.make} {l.model} 
+                      {vehicles.map(v => (
+                          <option key={v.id} value={v.id}>
+                          {v.year} {v.make} {v.model} 
                           </option>
                       ))}
                   </select>
