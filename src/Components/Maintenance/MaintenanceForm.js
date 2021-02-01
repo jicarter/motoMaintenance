@@ -1,27 +1,37 @@
 import React, { useContext, useEffect, useState } from "react";
 import { VehicleContext } from '../Vehicle/VehicleProvider';
 import { useHistory, useParams } from 'react-router-dom'
+import { MaintenanceContext } from "./MaintenanceProvider";
+import "./Maintenance.css"
+
+
 
 export const MaintenanceForm = () => {
     const { vehicles, getVehicles } = useContext(VehicleContext)
-    
-
-    const [mainEvent, setMainEvent] = useState({
-      vehicleId: 0,
-      toComplete: "",
-      requiredItems:""
-
-
-    });
+    const { getMaintenance, addMaintenance, getMaintenanceById, updateMaintenance } = useContext(MaintenanceContext)
+    const [isLoading, setIsLoading] = useState(true);
+    const [maintenance, setMaintenance] = useState({});
 
     const history = useHistory();
-    const {maintenanceId} = useParams();
+    const {maintenanceId}  = useParams();
    
     useEffect(() => {
       getVehicles()
+      .then(() => {
+        if (maintenanceId){
+          getMaintenanceById(maintenanceId)
+          .then(maintenance => {
+            setMaintenance(maintenance)
+            setIsLoading(false)
+          })
+        } else {
+          setIsLoading(false)
+        }
+      
+      })
     }, [])
 
-   
+    
     const handleControlledInputChange = (event) => {
     
       const newMainEvent = { ...maintenance }
@@ -29,35 +39,56 @@ export const MaintenanceForm = () => {
      
       newMainEvent[event.target.id] = event.target.value
       
-      setMainEvent(newMainEvent)
+      setMaintenance(newMainEvent)
     }
 
+    
     const handleClickSaveMaintenance = (event) => {
+    {
       event.preventDefault()
 
-      const vehicleId = vehicle.id
       
-
-      if (vehicleId === 0) {
-        window.alert("Please select a vehicle")
+      const user = localStorage.getItem("moto_user")
+      
+      if (maintenanceId) {
+        updateMaintenance({
+          id: maintenance.id,
+          userId: user,
+          vehicleId:maintenance.vehicleId,
+          toComplete:maintenance.toComplete,
+          requiredItems:maintenance.requiredItems,
+          timeStamp: Date.now()
+        })
+        .then(() => history.push('./'))
+      } else if (maintenance.vehicleId === 0) {
+          {
+        window.alert("Please select a vehicle")}
       } else {
-        
-        addMainEvent(mainEvent)
-        .then(() => history.push("/maintenance"))
+        setIsLoading(true)
+        addMaintenance({
+          userId: user,
+          vehicleId: maintenance.vehicleId,
+          toComplete: maintenance.toComplete,
+          requiredItems: maintenance.requiredItems,
+          timeStamp: Date.now()
+    
+        })
+        .then(() => history.push("./"))
       }
     }
+  }
 
     return (
       <form className="MaintenanceForm">
-          <h2 className="MaintenanceForm__title">New Maintenance Event</h2>
+          <h2 className="MaintenanceForm__title">Enter Maintenance Event</h2>
           <fieldset>
-              <div className="form-group">
-                  <label htmlFor="location">Assign to vehicle: </label>
-                  <select defaultValue={vehicle.id} name="vehicleId" id="vehicleId" onChange={handleControlledInputChange} className="form-control" >
+              <div className="form-group-vehicle">
+                  <label htmlFor="vehicle">Assign to vehicle: </label>
+                  <select  name="vehicleId" id="vehicleId" onChange={handleControlledInputChange} className="form-control" >
                       <option value="0">Select a vehicle</option>
                       {vehicles.map(l => (
                           <option key={l.id} value={l.id}>
-                              {l.name}
+                          {l.year} {l.make} {l.model} 
                           </option>
                       ))}
                   </select>
@@ -71,7 +102,7 @@ export const MaintenanceForm = () => {
           </fieldset>
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="requiredItems">Required requiredItems</label>
+                  <label htmlFor="requiredItems">Required Items</label>
                   <input type="text" id="requiredItems" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Required Items" value={maintenance.requiredItems}/>
               </div>
           </fieldset>

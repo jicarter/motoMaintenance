@@ -1,13 +1,29 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import { VehicleContext } from "../Vehicle/VehicleProvider"
+import { VehicleId } from "./MaintenanceForm"
+import { useHistory } from "react-router-dom"
+import { MaintenanceContext } from "./MaintenanceProvider" 
 
-const {vehicles} = useContext(VehicleContext)
-export const MaintenanceCard = ({maintenance}) => (
-    <section className='Maintenance'>
+
+export const MaintenanceCard = ({maintenance}) => {
+    const history = useHistory();
+   
+    
+    
+
+    return (
+    <section className='maintenanceCard'>
         <div className="vehicleName">
-            {vehicle.year} {vehicle.make} {vehicle.model}
+          
         </div>
         <div className="toComplete"> {maintenance.toComplete} </div>
         <div className="requiredItems"> {maintenance.requiredItems} </div>
+        <button className='edit__maintenance' onClick={() => {
+                history.push(`/maintenance/edit/${maintenance.id}`)
+            }}>Edit Maintenance</button>
     </section>
-)
+    )
+}
+
+
+

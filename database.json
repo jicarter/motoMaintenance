@@ -28,7 +28,7 @@
       "year": "2004",
       "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
       "timestamp": 1611944006363,
-      "id": 2
+      "id": 10
     },
     {
       "userId": "1",
@@ -38,7 +38,50 @@
       "notes": "Brand New",
       "timestamp": 1611944111442,
       "id": 3
+    },
+    {
+      "userId": "1",
+      "make": "Kawasaki",
+      "model": "KLX 140",
+      "year": "2021",
+      "notes": "New",
+      "timestamp": 1612204257534,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "userId": "1",
+      "make": "Kawasaki",
+      "model": "KX 65",
+      "year": "2005",
+      "notes": "two stroke",
+      "timestamp": 1612204345471
     }
   ],
-  "maintenance": []
+  "maintenance": [
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Dropdown",
+      "requiredItems": "this and that",
+      "timeStamp": 1612204398492,
+      "id": 16
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Dropdown",
+      "requiredItems": "this and that",
+      "timeStamp": 1612208012853,
+      "id": 17
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Air filter",
+      "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
+      "timeStamp": 1612213519898,
+      "id": 18
+    }
+  ]
 }

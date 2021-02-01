@@ -58,7 +58,7 @@ export const VehicleForm = () => {
             notes: vehicle.notes,
             timestamp: Date.now()
           })
-          .then(() => history.push('./vehicles'))
+          .then(() => history.push('./'))
         }
         
       }

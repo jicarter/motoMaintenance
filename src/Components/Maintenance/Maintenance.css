@@ -1,19 +1,19 @@
-.vehicles {
+.maintenance {
    
     text-align: center;
     background-position-x: center;
-    background-image: url(vehicleBackground.jpg);
+    background-image: url(maintenanceBackground.webp);
     z-index: 1;
     min-height: 65rem;
     min-width: 45rem;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    background-size: cover;
     justify-content: space-between;
     background-color: lightgray;
+    
   }
   
-  .vehicle {
+  .maintenanceCard{
       
       margin: 1em;
       padding: 1em;
@@ -24,18 +24,11 @@
       
     
   }
-  .vehicle--title {
+  .MaintenanceForm__title {
       color:#ec0b87;
       font-size: 75px;
       text-decoration: underline;
       
-  }
-
-  .vehicleForm__title {
-    color:#ec0b87;
-    font-size: 75px;
-    text-decoration: underline;
-    
   }
  
   .btn  {
@@ -44,11 +37,12 @@
 
   .addBtn {
       color:rgb(243, 10, 10);
+     
   }
 
   .root {
     background-position-x: center;
-    background-image: url(vehicleBackground.jpg);
+    background-image: url(maintenanceBackground.webp);
     z-index: 1;
     min-height: 65rem;
     min-width: 45rem;
@@ -57,16 +51,32 @@
     background-size: cover;
   }
 
-  .vehicleForm {
+  .form-group-vehicle {
+     padding-right: 25%;
+     margin-left: 25%;
+  }
+  .form-group {
+     padding-right: 25%;
+      margin-left: 25%;
+  }
+
+  
+  h2 {
+    color:#ec0b87;
+    font-size: 75px;
+    text-decoration: underline;
+    
+  }
+
+.MaintenanceForm {
     text-align: center;
     background-position-x: center;
-    background-image: url(vehicleBackground.jpg);
+    background-image: url(maintenanceBackground.webp);
     z-index: 1;
     min-height: 65rem;
     min-width: 45rem;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    background-size: cover;
     justify-content: space-between;
     background-color: lightgray;
-  }
+}

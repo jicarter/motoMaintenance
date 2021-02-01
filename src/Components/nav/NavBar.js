@@ -29,7 +29,7 @@ export const NavBar = (props) => {
             <div><a href="https://www.manualslib.com/" target="_blank">Repair Manuals</a></div>
             </li>
             <li className="navbar__item">
-                <button onClick={Logout()}>Logout</button>
+                <button className="logOut" onClick={Logout()}>Logout</button>
             </li>
         </ul>
     )

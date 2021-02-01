@@ -19,18 +19,20 @@ export const ApplicationViews = () => {
             </Route>
 
             <VehicleProvider>
-               <Route exact path="/vehicles">
-                    <VehicleList />
-                </Route>
-                <Route path="/vehicles/create">
-                    <VehicleForm />
-                </Route>  
-                <Route path="/vehicles/edit/:vehicleId(\d+)">
-                    <VehicleForm />
-                </Route>
-                <Route path="/vehicles/detail/:vehicleId(\d+)">
-                    <VehicleDetail />
-                </Route>  
+                <MaintenanceProvider>
+                    <Route exact path="/vehicles">
+                        <VehicleList />
+                    </Route>
+                    <Route path="/vehicles/create">
+                        <VehicleForm />
+                    </Route>  
+                    <Route path="/vehicles/edit/:vehicleId(\d+)">
+                        <VehicleForm />
+                    </Route>
+                    <Route path="/vehicles/detail/:vehicleId(\d+)">
+                        <VehicleDetail />
+                    </Route>  
+                </MaintenanceProvider>
             </VehicleProvider>
 
             <MaintenanceProvider>
@@ -40,6 +42,13 @@ export const ApplicationViews = () => {
                     </Route>
                     <Route path="/maintenance/create">
                         <MaintenanceForm />
+                    </Route>
+                    <Route path="/maintenance/edit/:maintenanceId(\d+)">
+                        <MaintenanceForm />
+                    </Route>
+                    <Route path='/vehicles/detail/:(\d+)'>
+                        <VehicleDetail />
+                        <MaintenanceList />
                     </Route>
                 </VehicleProvider>
             </MaintenanceProvider>
