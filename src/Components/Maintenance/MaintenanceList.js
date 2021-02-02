@@ -16,18 +16,20 @@ export const MaintenanceList = () => {
     
     
     return (
-        <div className="maintenance">
+        <section className="maintenance">
              {console.log("MaintenanceList:Render", maintenance)}
           <h2>Maintenance</h2>
 		      <button onClick={() => {history.push("/maintenance/create")}}>
             Add New Maintenance
           </button>
+          <div className="cardContainer">
             { 
               maintenance.map(m => {
                 return <MaintenanceCard key={m.id} maintenance={m} />
               })
              }
-          </div>
+             </div>
+          </section>
            
     )
     

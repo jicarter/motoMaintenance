@@ -12,7 +12,12 @@
     justify-content: space-between;
     background-color: lightgray;
   }
-  
+  .vehicleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .vehicle {
       
       margin: 1em;
@@ -69,4 +74,23 @@
     background-size: cover;
     justify-content: space-between;
     background-color: lightgray;
+  }
+
+  .vehicle__name {
+    color: #2d6de2;
+  }
+  .edit__vehicle {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #f12fd1;
+  }
+  .deleteBtn {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #fd0505;
+  }
+  .mainItem {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #ec0b87;
   }

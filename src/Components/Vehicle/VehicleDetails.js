@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react"
 import { VehicleContext } from "./VehicleProvider"
 import "./Vehicle.css"
-import { useParams, useHistory } from "react-router-dom"
-import { MaintenanceContext } from "../Maintenance/MaintenanceProvider";
+import { useParams, useHistory, Link } from "react-router-dom"
+import { MaintenanceCard } from "../Maintenance/MaintenanceCard"
 
 
 export const VehicleDetail = () => {
   const { getVehicleById, deleteVehicle } = useContext(VehicleContext)
-  const { setMaintenance, getMaintenance } = useContext(MaintenanceContext)
+ 
 	const [vehicle, setVehicle] = useState({})
 
 	const {vehicleId} = useParams();
@@ -37,7 +37,19 @@ export const VehicleDetail = () => {
       <div className="vehicle__notes">{vehicle.notes}</div>
       <button className='edit__vehicle' onClick={() => {
             history.push(`/vehicles/edit/${vehicleId}`)}}>Edit Vehicle</button>
-       <button onClick={ handleDelete }>DELETE Vehicle</button>  
+       <button className='deleteBtn' onClick={ handleDelete }>DELETE Vehicle</button>  
+      
+      <button className="mainItem"> <Link to={`../../Maintenance/create`}>Maintenance Event</Link></button>
+        <div className="maintCards">
+        <div className="cardContainer">
+            { 
+              vehicle.maintenance.map(m => {
+                return <MaintenanceCard key={m.id} maintenance={m} />
+              })
+             }
+             </div>
+        </div>
     </section>
+    
   )
 }

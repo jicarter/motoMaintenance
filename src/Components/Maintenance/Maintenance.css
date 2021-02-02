@@ -20,10 +20,15 @@
       border: 2px solid rgb(245, 28, 173);
       max-width: 25%;
       background-color: lightgray;
-     
       
-    
   }
+
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .MaintenanceForm__title {
       color:#ec0b87;
       font-size: 75px;

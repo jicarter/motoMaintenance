@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .h1, h1 {
     font-size: 8rem;
 }
@@ -25,7 +27,9 @@ fieldset {
     display: inline-block;
 }
 
-.form-control {
+.form-control,
+input,
+textarea {
     display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
@@ -40,6 +44,7 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: "Permanent Marker", cursive;
 }
 
 .container--login {
@@ -90,7 +95,6 @@ main {
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .registerTitle {

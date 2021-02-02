@@ -19,7 +19,7 @@
       "model": "YZ 250",
       "year": "2010",
       "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1611951465303
+      "timestamp": 1612293932618
     },
     {
       "userId": "1",
@@ -64,9 +64,9 @@
       "userId": "1",
       "vehicleId": "1",
       "toComplete": "Oil Change",
-      "requiredItems": "this works... I think",
+      "requiredItems": "It did work but it its still not right",
       "isComplete": false,
-      "timeStamp": 1612292326307
+      "timeStamp": 1612297176973
     },
     {
       "userId": "1",
@@ -157,6 +157,24 @@
       "isComplete": false,
       "timeStamp": 1612291306003,
       "id": 11
+    },
+    {
+      "id": 12,
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Air filter",
+      "requiredItems": "Air Filter",
+      "isComplete": false,
+      "timeStamp": 1612297043525
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Dropdown",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612300388310,
+      "id": 13
     }
   ]
 }
