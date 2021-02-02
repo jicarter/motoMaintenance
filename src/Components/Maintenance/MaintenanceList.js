@@ -4,7 +4,7 @@ import { VehicleContext } from "../Vehicle/VehicleProvider"
 import { MaintenanceCard } from "./MaintenanceCard";
 import { MaintenanceContext } from "./MaintenanceProvider";
 export const MaintenanceList = () => {
-    const { vehicles, getVehicles } = useContext(VehicleContext)
+    
     const { maintenance, getMaintenance } = useContext(MaintenanceContext)
     
     useEffect(() => {

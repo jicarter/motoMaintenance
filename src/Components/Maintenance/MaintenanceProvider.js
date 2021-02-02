@@ -8,7 +8,7 @@ export const MaintenanceProvider = (props) => {
     const [maintenance, setMaintenance] = useState([])
 
     const getMaintenance = () => {
-        return fetch("http://localhost:8088/maintenance")
+        return fetch("http://localhost:8088/maintenance?_expand=vehicle")
         .then(res => res.json())
         .then(setMaintenance)
     }
@@ -23,12 +23,12 @@ export const MaintenanceProvider = (props) => {
         })
         .then(getMaintenance)
     }
-    const getMaintenanceById = (id) => {
+     const getMaintenanceById = (id) => {
         return fetch(`http://localhost:8088/maintenance/${id}`)
             .then(res => res.json())
     }
     const updateMaintenance = maintenance => {
-        return fetch(`http://localhost:8088/vehicles/${maintenance.id}`, {
+        return fetch(`http://localhost:8088/maintenance/${maintenance.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"

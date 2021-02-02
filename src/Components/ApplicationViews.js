@@ -46,7 +46,7 @@ export const ApplicationViews = () => {
                     <Route path="/maintenance/edit/:maintenanceId(\d+)">
                         <MaintenanceForm />
                     </Route>
-                    <Route path='/vehicles/detail/:(\d+)'>
+                    <Route exact path='/vehicles/detail/:(\d+)'>
                         <VehicleDetail />
                         <MaintenanceList />
                     </Route>

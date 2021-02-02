@@ -57,9 +57,10 @@ export const MaintenanceForm = () => {
           vehicleId:maintenance.vehicleId,
           toComplete:maintenance.toComplete,
           requiredItems:maintenance.requiredItems,
+          isComplete: false,
           timeStamp: Date.now()
         })
-        .then(() => history.push('./'))
+        .then(() => history.push('../'))
       } else if (maintenance.vehicleId === 0) {
           {
         window.alert("Please select a vehicle")}
@@ -70,6 +71,7 @@ export const MaintenanceForm = () => {
           vehicleId: maintenance.vehicleId,
           toComplete: maintenance.toComplete,
           requiredItems: maintenance.requiredItems,
+          isComplete: false,
           timeStamp: Date.now()
     
         })
@@ -88,7 +90,7 @@ export const MaintenanceForm = () => {
                       <option value="0">Select a vehicle</option>
                       {vehicles.map(v => (
                           <option key={v.id} value={v.id}>
-                          {v.year} {v.make} {v.model} 
+                          {`${v.year} ${v.make} ${v.model}`} 
                           </option>
                       ))}
                   </select>

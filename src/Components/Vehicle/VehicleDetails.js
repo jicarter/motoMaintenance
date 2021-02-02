@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from "react"
 import { VehicleContext } from "./VehicleProvider"
 import "./Vehicle.css"
 import { useParams, useHistory } from "react-router-dom"
+import { MaintenanceContext } from "../Maintenance/MaintenanceProvider";
+
 
 export const VehicleDetail = () => {
   const { getVehicleById, deleteVehicle } = useContext(VehicleContext)
-
+  const { setMaintenance, getMaintenance } = useContext(MaintenanceContext)
 	const [vehicle, setVehicle] = useState({})
 
 	const {vehicleId} = useParams();
@@ -17,14 +19,17 @@ export const VehicleDetail = () => {
         history.push("/vehicles")
       })
   }
-
+  
   useEffect(() => {
     console.log("useEffect", vehicleId)
     getVehicleById(vehicleId)
     .then((response) => {
       setVehicle(response)
+   
+    
     })
     }, [])
+    
 
   return (
     <section className="vehicle">

@@ -60,52 +60,103 @@
   ],
   "maintenance": [
     {
+      "id": 1,
       "userId": "1",
       "vehicleId": "1",
-      "toComplete": "Dropdown",
+      "toComplete": "Oil Change",
+      "requiredItems": "this works... I think",
+      "isComplete": false,
+      "timeStamp": 1612292326307
+    },
+    {
+      "userId": "1",
+      "vehicleId": "3",
+      "toComplete": "Oil Change",
       "requiredItems": "this and that",
-      "timeStamp": 1612204398492,
-      "id": 16
+      "isComplete": false,
+      "timeStamp": 1612282829621,
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "vehicleId": "12",
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": false,
+      "timeStamp": 1612282841471,
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "vehicleId": "12",
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": false,
+      "timeStamp": 1612283034108,
+      "id": 4
     },
     {
       "userId": "1",
       "vehicleId": "1",
-      "toComplete": "Dropdown",
-      "requiredItems": "this and that",
-      "timeStamp": 1612208012853,
-      "id": 17
+      "toComplete": "Needs oil change ASAP",
+      "requiredItems": "oil",
+      "isComplete": false,
+      "timeStamp": 1612284389517,
+      "id": 5
     },
     {
       "userId": "1",
       "vehicleId": "1",
-      "toComplete": "Air filter",
-      "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
-      "timeStamp": 1612213519898,
-      "id": 18
+      "toComplete": "Needs oil change ASAP",
+      "requiredItems": "oil",
+      "isComplete": false,
+      "timeStamp": 1612284465968,
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "vehicleId": "1",
+      "toComplete": "Oil Change",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612284484592,
+      "id": 7
     },
     {
       "userId": "1",
       "vehicleId": "10",
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "timeStamp": 1612216064452,
-      "id": 19
+      "toComplete": "this is new",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612284504576,
+      "id": 8
     },
     {
       "userId": "1",
       "vehicleId": "1",
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "timeStamp": 1612216770798,
-      "id": 20
+      "toComplete": "this is new",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612286135762,
+      "id": 9
     },
     {
       "userId": "1",
-      "vehicleId": "1",
-      "toComplete": "Air filter",
+      "vehicleId": "12",
+      "toComplete": "Needs oil change ASAP",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612291285581,
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "vehicleId": "10",
+      "toComplete": "Needs oil change ASAP",
       "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
-      "timeStamp": 1612216807328,
-      "id": 21
+      "isComplete": false,
+      "timeStamp": 1612291306003,
+      "id": 11
     }
   ]
 }
