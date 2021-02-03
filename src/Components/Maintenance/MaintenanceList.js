@@ -3,10 +3,21 @@ import { useHistory } from "react-router-dom"
 import { VehicleContext } from "../Vehicle/VehicleProvider"
 import { MaintenanceCard } from "./MaintenanceCard";
 import { MaintenanceContext } from "./MaintenanceProvider";
+
+
+
+
+
+
+
+
+
 export const MaintenanceList = () => {
     
     const { maintenance, getMaintenance } = useContext(MaintenanceContext)
     
+   
+   
     useEffect(() => {
       getMaintenance()
     },[])
@@ -28,6 +39,7 @@ export const MaintenanceList = () => {
                 return <MaintenanceCard key={m.id} maintenance={m} />
               })
              }
+            
              </div>
           </section>
            

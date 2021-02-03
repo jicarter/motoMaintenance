@@ -14,7 +14,7 @@
   "vehicles": [
     {
       "id": 1,
-      "userId": "1",
+      "userId": 1,
       "make": "Yamaha",
       "model": "YZ 250",
       "year": "2010",
@@ -22,7 +22,7 @@
       "timestamp": 1612293932618
     },
     {
-      "userId": "1",
+      "userId": 1,
       "make": "Suzuki",
       "model": "RM 250",
       "year": "2004",
@@ -31,7 +31,7 @@
       "id": 10
     },
     {
-      "userId": "1",
+      "userId": 1,
       "make": "Kawasaki",
       "model": "KLX 300",
       "year": "2021",
@@ -40,7 +40,7 @@
       "id": 3
     },
     {
-      "userId": "1",
+      "userId": 1,
       "make": "Kawasaki",
       "model": "KLX 140",
       "year": "2021",
@@ -50,7 +50,7 @@
     },
     {
       "id": 12,
-      "userId": "1",
+      "userId": 1,
       "make": "Kawasaki",
       "model": "KX 65",
       "year": "2005",
@@ -60,17 +60,8 @@
   ],
   "maintenance": [
     {
-      "id": 1,
-      "userId": "1",
-      "vehicleId": "1",
-      "toComplete": "Oil Change",
-      "requiredItems": "It did work but it its still not right",
-      "isComplete": false,
-      "timeStamp": 1612297176973
-    },
-    {
-      "userId": "1",
-      "vehicleId": "3",
+      "userId": 1,
+      "vehicleId": 3,
       "toComplete": "Oil Change",
       "requiredItems": "this and that",
       "isComplete": false,
@@ -78,8 +69,8 @@
       "id": 2
     },
     {
-      "userId": "1",
-      "vehicleId": "12",
+      "userId": 1,
+      "vehicleId": 12,
       "toComplete": "Oil Change",
       "requiredItems": "this and that",
       "isComplete": false,
@@ -87,8 +78,8 @@
       "id": 3
     },
     {
-      "userId": "1",
-      "vehicleId": "12",
+      "userId": 1,
+      "vehicleId": 12,
       "toComplete": "Oil Change",
       "requiredItems": "this and that",
       "isComplete": false,
@@ -96,8 +87,8 @@
       "id": 4
     },
     {
-      "userId": "1",
-      "vehicleId": "1",
+      "userId": 1,
+      "vehicleId": 1,
       "toComplete": "Needs oil change ASAP",
       "requiredItems": "oil",
       "isComplete": false,
@@ -105,8 +96,8 @@
       "id": 5
     },
     {
-      "userId": "1",
-      "vehicleId": "1",
+      "userId": 1,
+      "vehicleId": 1,
       "toComplete": "Needs oil change ASAP",
       "requiredItems": "oil",
       "isComplete": false,
@@ -114,8 +105,8 @@
       "id": 6
     },
     {
-      "userId": "1",
-      "vehicleId": "1",
+      "userId": 1,
+      "vehicleId": 1,
       "toComplete": "Oil Change",
       "requiredItems": "this is new",
       "isComplete": false,
@@ -123,58 +114,13 @@
       "id": 7
     },
     {
-      "userId": "1",
-      "vehicleId": "10",
+      "userId": 1,
+      "vehicleId": 10,
       "toComplete": "this is new",
       "requiredItems": "this is new",
       "isComplete": false,
       "timeStamp": 1612284504576,
       "id": 8
-    },
-    {
-      "userId": "1",
-      "vehicleId": "1",
-      "toComplete": "this is new",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612286135762,
-      "id": 9
-    },
-    {
-      "userId": "1",
-      "vehicleId": "12",
-      "toComplete": "Needs oil change ASAP",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612291285581,
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "vehicleId": "10",
-      "toComplete": "Needs oil change ASAP",
-      "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
-      "isComplete": false,
-      "timeStamp": 1612291306003,
-      "id": 11
-    },
-    {
-      "id": 12,
-      "userId": "1",
-      "vehicleId": "1",
-      "toComplete": "Air filter",
-      "requiredItems": "Air Filter",
-      "isComplete": false,
-      "timeStamp": 1612297043525
-    },
-    {
-      "userId": "1",
-      "vehicleId": "1",
-      "toComplete": "Dropdown",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612300388310,
-      "id": 13
     }
   ]
 }

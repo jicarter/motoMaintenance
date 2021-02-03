@@ -38,8 +38,8 @@ export const VehicleForm = () => {
         setIsLoading(true);
         if (vehicleId){
           updateVehicle({
-            id: vehicle.id,
-            userId: user,
+            id: parseInt(vehicle.id),
+            userId: parseInt(user),
             make: vehicle.make,
             model: vehicle.model,
             year: vehicle.year,
@@ -50,8 +50,8 @@ export const VehicleForm = () => {
         } else {
           
           addVehicle({
-            id:vehicle.id,
-            userId: user,
+            id: parseInt(vehicle.id),
+            userId: parseInt(user),
             make: vehicle.make,
             model: vehicle.model, 
             year: vehicle.year,

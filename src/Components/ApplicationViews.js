@@ -13,7 +13,7 @@ import { MaintenanceForm } from "./Maintenance/MaintenanceForm";
 export const ApplicationViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
+            
             <Route exact path="/">
                 <Home />
             </Route>
@@ -31,6 +31,7 @@ export const ApplicationViews = () => {
                     </Route>
                     <Route path="/vehicles/detail/:vehicleId(\d+)">
                         <VehicleDetail />
+                        
                     </Route>  
                 </MaintenanceProvider>
             </VehicleProvider>

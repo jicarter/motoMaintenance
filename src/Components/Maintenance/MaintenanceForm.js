@@ -8,13 +8,20 @@ import "./Maintenance.css"
 
 export const MaintenanceForm = () => {
     const { vehicles, getVehicles } = useContext(VehicleContext)
-    const { getMaintenance, addMaintenance, getMaintenanceById, updateMaintenance } = useContext(MaintenanceContext)
+    const { getMaintenance, addMaintenance, getMaintenanceById, updateMaintenance, deleteMaintenance } = useContext(MaintenanceContext)
     const [isLoading, setIsLoading] = useState(true);
     const [maintenance, setMaintenance] = useState({});
 
     const history = useHistory();
     const {maintenanceId}  = useParams();
    
+    const HandleDelete = () => {
+      deleteMaintenance(maintenanceId)
+        .then(() => {
+          history.push("./")
+        })
+    }
+
     useEffect(() => {
       getVehicles()
       .then(() => {
@@ -52,8 +59,8 @@ export const MaintenanceForm = () => {
       
       if (maintenanceId) {
         updateMaintenance({
-          id: maintenance.id,
-          userId: user,
+          id: parseInt(maintenance.id),
+          userId: parseInt(user),
           vehicleId:maintenance.vehicleId,
           toComplete:maintenance.toComplete,
           requiredItems:maintenance.requiredItems,
@@ -61,14 +68,11 @@ export const MaintenanceForm = () => {
           timeStamp: Date.now()
         })
         .then(() => history.push('../'))
-      } else if (maintenance.vehicleId === 0) {
-          {
-        window.alert("Please select a vehicle")}
-      } else {
+      }  else {
         setIsLoading(true)
         addMaintenance({
-          userId: user,
-          vehicleId: maintenance.vehicleId,
+          userId: parseInt(user),
+          vehicleId:parseInt(maintenance.vehicleId),
           toComplete: maintenance.toComplete,
           requiredItems: maintenance.requiredItems,
           isComplete: false,
@@ -114,6 +118,10 @@ export const MaintenanceForm = () => {
           <button className="btn btn-primary"
             onClick={handleClickSaveMaintenance}>
             Save Maintenance Event
+          </button>
+          <button className="deleteBtn"
+            onClick={HandleDelete}>
+            Delete Maintenance Event
           </button>
       </form>
     )

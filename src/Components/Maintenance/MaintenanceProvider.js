@@ -38,7 +38,7 @@ export const MaintenanceProvider = (props) => {
           .then(getMaintenance)
       }
       const deleteMaintenance = maintenanceId => {
-        return fetch(`http://localhost:8088/vehicles/${maintenanceId}`, {
+        return fetch(`http://localhost:8088/maintenance/${maintenanceId}`, {
             method: "DELETE"
         })
             .then(getMaintenance)
