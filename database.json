@@ -14,22 +14,113 @@
   "vehicles": [
     {
       "id": 1,
-      "userId": "1",
+      "userId": 1,
       "make": "Yamaha",
       "model": "YZ 250",
       "year": "2010",
       "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1611932810734
+      "timestamp": 1612293932618
     },
     {
-      "id": 2,
-      "userId": "1",
+      "userId": 1,
       "make": "Suzuki",
       "model": "RM 250",
       "year": "2004",
-      "notes": "REbuild 10 hrs ago",
-      "timestamp": 1611857305886
+      "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
+      "timestamp": 1611944006363,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "make": "Kawasaki",
+      "model": "KLX 300",
+      "year": "2021",
+      "notes": "Brand New",
+      "timestamp": 1611944111442,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "make": "Kawasaki",
+      "model": "KLX 140",
+      "year": "2021",
+      "notes": "New",
+      "timestamp": 1612204257534,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "make": "Kawasaki",
+      "model": "KX 65",
+      "year": "2005",
+      "notes": "two stroke",
+      "timestamp": 1612204345471
     }
   ],
-  "maintenance": []
+  "maintenance": [
+    {
+      "userId": 1,
+      "vehicleId": 3,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": false,
+      "timeStamp": 1612282829621,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "vehicleId": 12,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": false,
+      "timeStamp": 1612282841471,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "vehicleId": 12,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": false,
+      "timeStamp": 1612283034108,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Needs oil change ASAP",
+      "requiredItems": "oil",
+      "isComplete": false,
+      "timeStamp": 1612284389517,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Needs oil change ASAP",
+      "requiredItems": "oil",
+      "isComplete": false,
+      "timeStamp": 1612284465968,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612284484592,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "vehicleId": 10,
+      "toComplete": "this is new",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612284504576,
+      "id": 8
+    }
+  ]
 }

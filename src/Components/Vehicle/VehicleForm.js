@@ -14,7 +14,7 @@ export const VehicleForm = () => {
       const history = useHistory();
   
       const handleControlledInputChange = (event) => {
-        const newVehicle = { ...vehicle }
+      const newVehicle = { ...vehicle }
 
 
           newVehicle[event.target.id] = event.target.value
@@ -38,8 +38,8 @@ export const VehicleForm = () => {
         setIsLoading(true);
         if (vehicleId){
           updateVehicle({
-            id: vehicle.id,
-            userId: user,
+            id: parseInt(vehicle.id),
+            userId: parseInt(user),
             make: vehicle.make,
             model: vehicle.model,
             year: vehicle.year,
@@ -50,15 +50,15 @@ export const VehicleForm = () => {
         } else {
           
           addVehicle({
-            id:vehicle.id,
-            userId: user,
+            id: parseInt(vehicle.id),
+            userId: parseInt(user),
             make: vehicle.make,
             model: vehicle.model, 
             year: vehicle.year,
             notes: vehicle.notes,
             timestamp: Date.now()
           })
-          .then(() => history.push('./vehicles'))
+          .then(() => history.push('./'))
         }
         
       }

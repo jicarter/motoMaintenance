@@ -8,24 +8,26 @@ import "./Vehicle.css"
 
 export const VehicleList = () => {
     const { getVehicles, vehicles } = useContext(VehicleContext)
-    const { vehicle, setVehicle } =useState({})
-    const vehicleId = vehicles.id
+    
+   
     const history = useHistory()
     useEffect(()=>{
         getVehicles()
     }, [])
 
     return (
-        <div className="vehicles">
+        <section className="vehicles">
           <section className='vehicle--title'>Vehicles</section>
 		      <button className="addBtn"onClick={() => {history.push("/vehicles/create")}}>
             Add Vehicle
           </button>
+          <div className="vehicleContainer">
           {
             vehicles.map(vehicle => {
           return <VehicleCard key={vehicle.id} vehicle={vehicle} />
           })}
           </div>
+          </section>
 
     )
           

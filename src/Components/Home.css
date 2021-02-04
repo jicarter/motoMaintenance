@@ -13,17 +13,14 @@
     background-color: lightgray;
   }
 
-  .container {
-    
-    
-  }
+  
 
   .title {
     color: #ec0b87;
     font-family: "Permanent Marker", cursive;
     font-size: 100px;
     line-height: 1.5;
-    margin-left: 40%;
+    
     text-decoration: underline;
     
   }
@@ -32,7 +29,7 @@
     font-family: "Permanent Marker", cursive;
     font-size: 30px;
     line-height: 1.5;
-    margin-left: 40%;
+  
     text-decoration: underline;
    
   }
@@ -42,10 +39,26 @@
     font-family: "Permanent Marker", cursive;
     font-size: 30px;
     line-height: 1.5;
-    margin-left: 40%;
     text-decoration: underline;
     margin-top: 10%;
-    margin-bottom: 50%;
+   
+  }
+  
+  .intro2 {
+    color:#c60bec;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    text-decoration: underline;
+  }
+
+  .intro3 {
+    color:#c60bec;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    line-height: 1.5;
+    text-decoration: underline;
+   
   }
 
   

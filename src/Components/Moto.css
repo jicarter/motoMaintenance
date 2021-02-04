@@ -3,13 +3,14 @@
 
 body,
 button,
-input,
+
 select,
 textarea {
   background: rgba(204, 204, 204, 0.5);
   font-family: "Permanent Marker", cursive;
   font-size: 14px;
   line-height: 1.5;
+  
 }
 
 h1 {
@@ -19,7 +20,7 @@ h1 {
   text-decoration: underline;
 }
 h2 {
-  color:#2f0335;
+  color: #ec0b87;
   font-family: "Permanent Marker", cursive;
   letter-spacing: 2px;
   text-decoration: underline;
