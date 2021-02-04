@@ -55,7 +55,8 @@ export const Register = (props) => {
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
-
+           
+           
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="registerTitle">Please Register for Moto-Maintenance</h1>
                 <fieldset>
@@ -72,6 +73,7 @@ export const Register = (props) => {
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register and Sign in </button>
+                    <button className="registerBackBtn" onClick={() => history.goBack()}>Back</button>
                 </fieldset>
             </form>
         </main>

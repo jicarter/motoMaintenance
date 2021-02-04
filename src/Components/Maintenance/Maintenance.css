@@ -107,6 +107,7 @@
     justify-content: space-around;
     margin-right: 2em;
     color: #e3f11c;
+    background-color: dimgray
   }
   .deleteBtn {
     justify-content: space-around;
@@ -117,7 +118,8 @@
   .complete {
     justify-content: space-around;
     margin-right: 2em;
-    color: #4f9e05;
+    color: #87f81d;
+    background-color: dimgray
   }
   .backBtn {
     width: 25em;

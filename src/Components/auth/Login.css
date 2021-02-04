@@ -34,7 +34,6 @@ textarea {
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    max-width: 30%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -105,4 +104,8 @@ main {
 .submit {
     color: #0c000a;
     background-color: dimgray;
+    padding-right: 100%;
+}
+.registerBackBtn {
+   margin-left: 10%;
 }

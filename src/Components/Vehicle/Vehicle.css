@@ -89,23 +89,27 @@
 
   .vehicle__notes {
     font-size: 20px;
+    margin-bottom: 2%;
   }
   .edit__vehicle {
     justify-content: space-around;
     margin-right: 2em;
     color: #0c000a;
     background-color: dimgray;
+    margin-bottom: 2%;
   }
   .deleteBtn {
     justify-content: space-around;
     margin-right: 2em;
     color: #0c0b0b;
     background-color: rgb(248, 8, 8);
+    margin-bottom: 2%;
   }
   .mainItem {
     justify-content: space-around;
     margin-right: 2em;
     color: #ec0b87;
+    margin-bottom: 2%;
   }
 
   .detail {
