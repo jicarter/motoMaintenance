@@ -12,16 +12,28 @@
     background-color: lightgray;
     
   }
-  
+  .maintCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .maintenanceCard{
-      flex: 0 0 33%;
+      
       margin: 1em;
       padding: 1em;
       border: 2px solid rgb(245, 28, 173);
-      max-width: 25%;
       background-color: lightgray;
       
   }
+  .completedMaintenance{
+      display:inline-block;
+      margin: 1em;
+      padding: 1em;
+      border: 2px solid rgb(42, 141, 11);
+      background-color: lightgray;
+      
+  }
+      
 
   .cardContainer {
     display: flex;
@@ -35,13 +47,18 @@
       text-decoration: underline;
       
   }
- 
+  
+  .addMtnBtn {
+    color: #0ad4f8;
+    background-color: dimgray;
+  }
   .btn  {
       color: #ec0b87;
   }
 
   .addBtn {
-      color:rgb(243, 10, 10);
+      color:rgb(220, 243, 16);
+      background-color: dimgray;
      
   }
 
@@ -86,3 +103,24 @@
     justify-content: space-between;
     background-color: lightgray;
 }
+  .edit {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #e3f11c;
+  }
+  .deleteBtn {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #0a0a0a;
+    background-color: rgb(248, 8, 8);
+  }
+  .complete {
+    justify-content: space-around;
+    margin-right: 2em;
+    color: #4f9e05;
+  }
+  .backBtn {
+    width: 25em;
+    color: rgb(33, 247, 26);
+    background-color: dimgray;
+  }
