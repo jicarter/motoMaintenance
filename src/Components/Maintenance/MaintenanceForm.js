@@ -15,12 +15,7 @@ export const MaintenanceForm = () => {
     const history = useHistory();
     const {maintenanceId}  = useParams();
    
-    const HandleDelete = () => {
-      deleteMaintenance(maintenanceId)
-        .then(() => {
-          history.push("./")
-        })
-    }
+   
 
     useEffect(() => {
       getVehicles()
@@ -79,13 +74,14 @@ export const MaintenanceForm = () => {
           timeStamp: Date.now()
     
         })
-        .then(() => history.push("./"))
+        .then(() => history.push(`/vehicles/detail/${maintenance.vehicleId}`))
       }
     }
   }
 
     return (
       <form className="MaintenanceForm">
+       <button className="backBtn" onClick={() => history.goBack()}>Back</button>
           <h2 className="MaintenanceForm__title">Enter Maintenance Event</h2>
           <fieldset>
               <div className="form-group-vehicle">
@@ -119,10 +115,7 @@ export const MaintenanceForm = () => {
             onClick={handleClickSaveMaintenance}>
             Save Maintenance Event
           </button>
-          <button className="deleteBtn"
-            onClick={HandleDelete}>
-            Delete Maintenance Event
-          </button>
+          
       </form>
     )
 }

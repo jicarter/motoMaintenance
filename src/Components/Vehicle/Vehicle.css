@@ -23,7 +23,7 @@
       margin: 1em;
       padding: 1em;
       border: 2px solid rgb(245, 28, 173);
-      max-width: 25%;
+      
       background-color: lightgray;
      
       
@@ -47,8 +47,13 @@
       color: #ec0b87;
   }
 
+  .mainItem {
+    color: #0ad4f8;
+    background-color: dimgray;
+  }
   .addBtn {
-      color:rgb(243, 10, 10);
+    color:rgb(220, 243, 16);
+    background-color: dimgray;
   }
 
   .root {
@@ -78,19 +83,47 @@
 
   .vehicle__name {
     color: #2d6de2;
+    font-size: 50px;
+
+  }
+
+  .vehicle__notes {
+    font-size: 20px;
   }
   .edit__vehicle {
     justify-content: space-around;
     margin-right: 2em;
-    color: #f12fd1;
+    color: #0c000a;
+    background-color: dimgray;
   }
   .deleteBtn {
     justify-content: space-around;
     margin-right: 2em;
-    color: #fd0505;
+    color: #0c0b0b;
+    background-color: rgb(248, 8, 8);
   }
   .mainItem {
     justify-content: space-around;
     margin-right: 2em;
     color: #ec0b87;
+  }
+
+  .detail {
+    text-align: center;
+    background-position-x: center;
+    background-image: url(vehicleBackground.jpg);
+    z-index: 1;
+    min-height: 65rem;
+    min-width: 45rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    background-color: lightgray;
+  }
+
+  .backBtn {
+    width: 25em;
+    color: rgb(33, 247, 26);
+    background-color: dimgray;
   }

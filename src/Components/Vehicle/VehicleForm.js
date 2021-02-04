@@ -79,6 +79,7 @@ export const VehicleForm = () => {
 
     return (
         <form className="vehicleForm">
+         <button className="backBtn" onClick={() => history.goBack()}>Back</button>
             <h2 className="vehicleForm__title">Enter Your Info</h2>
             <fieldset>
                 <div className="form-group">
