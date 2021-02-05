@@ -6,31 +6,75 @@
       "email": "jordan.carter.0023@gmail.com"
     },
     {
-      "email": "jojoBaggins@user.net",
-      "name": "jojo Baggins",
-      "id": 2
+      "email": "rocketman@rocket.com",
+      "name": "Johnny Rocket",
+      "id": 3
+    },
+    {
+      "email": "test@test.com",
+      "name": "test test",
+      "id": 4
+    },
+    {
+      "email": "new@new.net",
+      "name": "new new",
+      "id": 5
     }
   ],
   "vehicles": [
     {
       "id": 1,
       "userId": 1,
+      "make": "Kawasaki",
+      "model": "KLX 300",
+      "year": "2021",
+      "notes": "New",
+      "timestamp": 1612542020603
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "make": "Piece of Garbage",
+      "model": "Garbage",
+      "year": "2021",
+      "notes": "Total Trash",
+      "timestamp": 1612544463294
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "make": "some bike",
+      "model": "big one",
+      "year": "now",
+      "notes": "New",
+      "timestamp": 1612549236615
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "make": "Kawasaki",
+      "model": "YZ 250",
+      "year": "Brand new. Added hand guards and hour meter",
+      "timestamp": 1612550748832
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "make": "Pile",
+      "model": "of shit",
+      "year": "giant",
+      "notes": "yep",
+      "timestamp": 1612553597250
+    },
+    {
+      "id": 8,
+      "userId": 5,
       "make": "Yamaha",
       "model": "YZ 250",
-      "year": "2010",
-      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1612293932618
+      "year": "2021",
+      "notes": "New",
+      "timestamp": 1612555237234
     }
   ],
-  "maintenance": [
-    {
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "isComplete": false,
-      "timeStamp": 1612471141842,
-      "id": 1
-    }
-  ]
+  "maintenance": []
 }

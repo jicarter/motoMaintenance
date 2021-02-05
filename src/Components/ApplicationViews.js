@@ -8,7 +8,9 @@ import { VehicleDetail } from "./Vehicle/VehicleDetails";
 import { MaintenanceProvider } from "./Maintenance/MaintenanceProvider";
 import { MaintenanceList } from "./Maintenance/MaintenanceList";
 import { MaintenanceForm } from "./Maintenance/MaintenanceForm";
-
+import { ProfileProvider } from "./Profile/ProfileProvider";
+import { ProfileCard } from './Profile/ProfilePage'
+import { EditProfileForm } from "./Profile/EditProfile";
 
 export const ApplicationViews = () => {
     return (
@@ -53,6 +55,15 @@ export const ApplicationViews = () => {
                     </Route>
                 </VehicleProvider>
             </MaintenanceProvider>
+
+            <ProfileProvider>
+                <Route exact path='/profile'>
+                    <ProfileCard />
+                </Route>
+                <Route path='/profile/edit/:userId(\d+)'>
+                    <EditProfileForm />
+                </Route>
+            </ProfileProvider>
             </>
     )
 }    

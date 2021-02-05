@@ -5,23 +5,25 @@ export const VehicleContext = createContext()
 
 export const VehicleProvider = (props) => {
     const [vehicles, setVehicles] = useState([])
+    const user = localStorage.getItem("moto_user")
 
-    
+
+
     const getVehicles = () => {
-        return fetch("http://localhost:8088/vehicles?_expand=maintenance")
-        .then(res => res.json())
-        .then(setVehicles)
+        return fetch(`http://localhost:8088/vehicles/?userId=${user}&_expand=maintenance`)
+            .then(res => res.json())
+            .then(setVehicles)
     }
 
     const addVehicle = vehicleObj => {
-        return fetch("http://localhost:8088/vehicles", {
+        return fetch(`http://localhost:8088/vehicles/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(vehicleObj)
         })
-        .then(getVehicles)
+            .then(getVehicles)
     }
     const getVehicleById = (id) => {
         return fetch(`http://localhost:8088/vehicles/${id}?_embed=maintenance`)
@@ -35,20 +37,20 @@ export const VehicleProvider = (props) => {
     }
     const updateVehicle = vehicle => {
         return fetch(`http://localhost:8088/vehicles/${vehicle.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(vehicle)
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(vehicle)
         })
-          .then(getVehicles)
-      }
+            .then(getVehicles)
+    }
 
-      
-   
+
+
     return (
         <VehicleContext.Provider value={{
-            vehicles, getVehicles, addVehicle, getVehicleById, updateVehicle, deleteVehicle, 
+            vehicles, getVehicles, addVehicle, getVehicleById, updateVehicle, deleteVehicle,
         }}>
             {props.children}
         </VehicleContext.Provider>

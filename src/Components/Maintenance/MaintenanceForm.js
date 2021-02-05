@@ -107,8 +107,8 @@ export const MaintenanceForm = () => {
                   <label htmlFor="requiredItems">Required Items</label>
                   <input type="text" id="requiredItems" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Required Items" value={maintenance.requiredItems}/>
               </div>
-             
           </fieldset>
+             
         
           
           <button className="btn btn-primary"
