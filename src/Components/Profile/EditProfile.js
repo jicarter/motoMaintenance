@@ -3,18 +3,24 @@ import { ProfileContext } from "./ProfileProvider";
 import { useHistory} from 'react-router-dom'
 
 export const EditProfileForm = () => {
-    const { profile, getProfile, updateProfile } = useContext(ProfileContext)
-    const [setProfile] = useState({});
+    const { getProfile, updateProfile } = useContext(ProfileContext)
+    const [profile, setProfile] = useState({});
     const history = useHistory();
 
-    useEffect(() => {
+    const refreshProfile = () => {
         getProfile()
-        .then(console.log(profile))
-    })
+        
+        .then(profile => {
+            setProfile(profile)
+        })
+    }
 
+    useEffect(() => {
+       refreshProfile()
+    }, [])    
     const handleControlledInputChange = (event) => {
 
-        const newProfileEvent = { ...users }
+        const newProfileEvent = { ...profile}
 
 
         newProfileEvent[event.target.id] = event.target.value
@@ -24,24 +30,43 @@ export const EditProfileForm = () => {
 
     const handleClickSaveProfile = (event) => {
         event.preventDefault()
-
+        
         updateProfile({
-            id: parseInt(user.id),
-            email: user.email,
-            parts: ""
+            id: parseInt(profile.id),
+            name: profile.name,
+            email: profile.email,
+            parts: profile.parts
 
         })
-        .then(() => history.push('./'))
+        .then(refreshProfile())
+        .then(() => history.push('../'))
+    }
+    const handleClickSaveDefault = (event) => {
+        event.preventDefault()
+        
+        updateProfile({
+            id: parseInt(profile.id),
+            name: profile.name,
+            email: profile.email,
+            parts:"https://www.rockymountainatvmc.com/"
+
+        })
+        .then(refreshProfile())
+        .then(() => history.push('../'))
     }
 
     return (
 
         <form>
-            <label for="parts">Add your own parts page</label>
+            <label form="parts">Add your own parts page</label>
             <input type="url" id="parts" name="parts" onChange={handleControlledInputChange} required autoFocus className="form-control"></input>
             <button className="btn btn-primary"
             onClick={handleClickSaveProfile}>
             Save Changes
+          </button>
+            <button className="btn btn-primary"
+            onClick={handleClickSaveDefault}>
+            Reset to Default
           </button>
         </form>
     )

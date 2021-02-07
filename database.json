@@ -3,78 +3,30 @@
     {
       "id": 1,
       "name": "Jordan Carter",
-      "email": "jordan.carter.0023@gmail.com"
-    },
-    {
-      "email": "rocketman@rocket.com",
-      "name": "Johnny Rocket",
-      "id": 3
-    },
-    {
-      "email": "test@test.com",
-      "name": "test test",
-      "id": 4
-    },
-    {
-      "email": "new@new.net",
-      "name": "new new",
-      "id": 5
+      "email": "jordan.carter.0023@gmail.com",
+      "parts": "https://www.rockymountainatvmc.com/"
     }
   ],
   "vehicles": [
     {
       "id": 1,
       "userId": 1,
-      "make": "Kawasaki",
-      "model": "KLX 300",
-      "year": "2021",
-      "notes": "New",
-      "timestamp": 1612542020603
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "make": "Piece of Garbage",
-      "model": "Garbage",
-      "year": "2021",
-      "notes": "Total Trash",
-      "timestamp": 1612544463294
-    },
-    {
-      "id": 4,
-      "userId": 3,
-      "make": "some bike",
-      "model": "big one",
-      "year": "now",
-      "notes": "New",
-      "timestamp": 1612549236615
-    },
-    {
-      "id": 6,
-      "userId": 3,
-      "make": "Kawasaki",
-      "model": "YZ 250",
-      "year": "Brand new. Added hand guards and hour meter",
-      "timestamp": 1612550748832
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "make": "Pile",
-      "model": "of shit",
-      "year": "giant",
-      "notes": "yep",
-      "timestamp": 1612553597250
-    },
-    {
-      "id": 8,
-      "userId": 5,
       "make": "Yamaha",
       "model": "YZ 250",
-      "year": "2021",
-      "notes": "New",
-      "timestamp": 1612555237234
+      "year": "2010",
+      "notes": "REbuild 10 hrs ago",
+      "timestamp": 1612720104434
     }
   ],
-  "maintenance": []
+  "maintenance": [
+    {
+      "id": 1,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "oil",
+      "isComplete": true,
+      "timeStamp": 1612720138396
+    }
+  ]
 }

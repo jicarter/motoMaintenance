@@ -4,7 +4,7 @@ import { VehicleCard } from "./VehicleCard";
 import { useHistory } from "react-router-dom"
 import "./Vehicle.css"
 
-const user = localStorage.getItem("moto_user")
+
 
 
 export const VehicleList = () => {

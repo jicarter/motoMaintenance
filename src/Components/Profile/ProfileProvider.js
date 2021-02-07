@@ -8,13 +8,13 @@ export const ProfileProvider = (props) => {
     const user = localStorage.getItem("moto_user")
 
     const getProfile = () => {
-        return fetch(`http://localhost:8088/users/?id=${user}`)
+        return fetch(`http://localhost:8088/users/${user}`)
         .then(res => res.json())
-        .then(setProfile)
+        
     }
 
     const updateProfile = profile => {
-        return fetch(`http://localhost:8088/users/?id=${user}`, {
+        return fetch(`http://localhost:8088/users/${user}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

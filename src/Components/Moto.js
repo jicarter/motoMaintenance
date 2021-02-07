@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { ApplicationViews } from "./ApplicationViews";
+import { NavBarProvider } from "./nav/NavBarProvider";
 import { NavBar } from "./nav/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
@@ -13,7 +14,9 @@ export const Moto = () => (
         if (localStorage.getItem("moto_user")) {
           return (
             <>
-              <NavBar />
+              <NavBarProvider>
+                <NavBar key={window.location.pathname} />
+              </NavBarProvider>
               <ApplicationViews />
             </>
           );

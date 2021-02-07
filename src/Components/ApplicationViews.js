@@ -9,7 +9,7 @@ import { MaintenanceProvider } from "./Maintenance/MaintenanceProvider";
 import { MaintenanceList } from "./Maintenance/MaintenanceList";
 import { MaintenanceForm } from "./Maintenance/MaintenanceForm";
 import { ProfileProvider } from "./Profile/ProfileProvider";
-import { ProfileCard } from './Profile/ProfilePage'
+import { ProfileDetails } from './Profile/ProfileDetails'
 import { EditProfileForm } from "./Profile/EditProfile";
 
 export const ApplicationViews = () => {
@@ -58,7 +58,7 @@ export const ApplicationViews = () => {
 
             <ProfileProvider>
                 <Route exact path='/profile'>
-                    <ProfileCard />
+                    <ProfileDetails />
                 </Route>
                 <Route path='/profile/edit/:userId(\d+)'>
                     <EditProfileForm />
