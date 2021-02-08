@@ -4,25 +4,28 @@
       "id": 1,
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
-      "parts": "https://www.rockymountainatvmc.com/"
+      "parts": "https://www.motosport.com/"
     },
     {
       "email": "rocketman@rocket.com",
       "name": "Joe Joe",
       "parts": "https://www.rockymountainatvmc.com/",
       "id": 2
+    },
+    {
+      "email": "test@TEST.COM",
+      "name": "test test",
+      "parts": "https://www.rockymountainatvmc.com/",
+      "id": 3
+    },
+    {
+      "email": "jay@jay.com",
+      "name": "jay jay",
+      "parts": "https://www.rockymountainatvmc.com/",
+      "id": 4
     }
   ],
   "vehicles": [
-    {
-      "id": 1,
-      "userId": 1,
-      "make": "Yamaha",
-      "model": "YZ 250",
-      "year": "2010",
-      "notes": "REbuild 10 hrs ago",
-      "timestamp": 1612720104434
-    },
     {
       "id": 2,
       "userId": 2,
@@ -33,43 +36,25 @@
       "timestamp": 1612721332392
     },
     {
-      "id": 3,
+      "id": 4,
+      "userId": 3,
+      "make": "Yamaha",
+      "model": "YZ 250",
+      "year": "2010",
+      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
+      "timestamp": 1612798492912
+    },
+    {
+      "id": 5,
       "userId": 1,
       "make": "Yamaha",
-      "model": "KX 65",
+      "model": "YZ 250",
       "year": "2021",
-      "notes": "New",
-      "timestamp": 1612721459850
+      "notes": "Total Trash",
+      "timestamp": 1612799970968
     }
   ],
   "maintenance": [
-    {
-      "id": 1,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "isComplete": true,
-      "timeStamp": 1612720138396
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "change the brakes",
-      "requiredItems": "Brakes // Neutron Brake Pad - Sintered Metal Fits: 2010 YAMAHA YZ250 Part# 1261170023 | Mfg Part# NA450R",
-      "isComplete": true,
-      "timeStamp": 1612721227995
-    },
-    {
-      "userId": 1,
-      "vehicleId": 3,
-      "toComplete": "this is new",
-      "requiredItems": "this works... I think",
-      "isComplete": false,
-      "timeStamp": 1612791777142,
-      "id": 3
-    },
     {
       "userId": 2,
       "vehicleId": 2,
@@ -78,6 +63,42 @@
       "isComplete": false,
       "timeStamp": 1612791951496,
       "id": 4
+    },
+    {
+      "userId": 3,
+      "vehicleId": 4,
+      "toComplete": "Oil Change",
+      "requiredItems": "oil",
+      "isComplete": false,
+      "timeStamp": 1612798759409,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "vehicleId": null,
+      "toComplete": "Oil Change",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612799886890,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "vehicleId": null,
+      "toComplete": "Oil Change",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612799889546,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "vehicleId": null,
+      "toComplete": "Oil Change",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612799891656,
+      "id": 8
     }
   ]
 }

@@ -9,7 +9,7 @@ import "./Maintenance.css"
 export const MaintenanceForm = () => {
     const { vehicles, getVehicles } = useContext(VehicleContext)
     const { addMaintenance, getMaintenanceById, updateMaintenance, deleteMaintenance } = useContext(MaintenanceContext)
-    const [setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     const [maintenance, setMaintenance] = useState({});
     const history = useHistory();
     const {maintenanceId}  = useParams();
