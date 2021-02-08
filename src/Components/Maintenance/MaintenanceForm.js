@@ -8,14 +8,13 @@ import "./Maintenance.css"
 
 export const MaintenanceForm = () => {
     const { vehicles, getVehicles } = useContext(VehicleContext)
-    const { getMaintenance, addMaintenance, getMaintenanceById, updateMaintenance, deleteMaintenance } = useContext(MaintenanceContext)
-    const [isLoading, setIsLoading] = useState(true);
+    const { addMaintenance, getMaintenanceById, updateMaintenance, deleteMaintenance } = useContext(MaintenanceContext)
+    const [setIsLoading] = useState(true);
     const [maintenance, setMaintenance] = useState({});
-
     const history = useHistory();
     const {maintenanceId}  = useParams();
    
-   
+   //module uses provider to fetch data to create new maintenance and update maintenance
 
     useEffect(() => {
       getVehicles()
@@ -35,9 +34,9 @@ export const MaintenanceForm = () => {
 
     
     const handleControlledInputChange = (event) => {
-    
+    //handles the changes made in the form
       const newMainEvent = { ...maintenance }
-      
+     //makes a copy to change 
      
       newMainEvent[event.target.id] = event.target.value
       
@@ -46,12 +45,12 @@ export const MaintenanceForm = () => {
 
     
     const handleClickSaveMaintenance = (event) => {
-    {
+    { //handles the save button
       event.preventDefault()
 
       
       const user = localStorage.getItem("moto_user")
-      
+      //if there is an exsisting ID then the form edits, if ther is no ID then it creates new
       if (maintenanceId) {
         updateMaintenance({
           id: parseInt(maintenance.id),

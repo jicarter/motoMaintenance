@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom"
 import "./Vehicle.css"
 
 
-
+//renders the list of all of the vehicles using the card component
 
 export const VehicleList = () => {
   const { getVehicles, vehicles } = useContext(VehicleContext)

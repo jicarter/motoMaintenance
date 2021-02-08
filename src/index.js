@@ -4,10 +4,13 @@ import './index.css';
 import { Moto } from "./Components/Moto";
 import { BrowserRouter as Router } from "react-router-dom"
 
+
+//allows the page to render. Script tag URL fixed issue with react-router-dom not being found
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-        <Moto />
+      <Moto />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

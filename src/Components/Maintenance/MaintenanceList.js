@@ -5,7 +5,7 @@ import { MaintenanceContext } from "./MaintenanceProvider";
 
 
 
-
+//module renders the maintenance events
 
 
 
@@ -22,7 +22,7 @@ export const MaintenanceList = () => {
 
   const history = useHistory()
 
-
+// retrieves events from the DB and injects them into HTML using JSX
 
   return (
     <section className="maintenance">

@@ -7,6 +7,9 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import "./Moto.css";
 
+
+//provides the render pathway based on log in 
+//key on nav bar allows the re-render after changes are made by the user
 export const Moto = () => (
   <>
     <Route

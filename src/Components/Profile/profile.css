@@ -1,0 +1,46 @@
+.profile {
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid rgb(245, 28, 173);
+    background-color: lightgray;
+}
+
+.profile--title {
+    color:#aa0cf3;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.userName {
+   
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.name {
+    color:#aa0cf3;
+    font-size: 40px;
+}
+
+.emailTitle {
+    
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.email {
+    color:#aa0cf3;
+    font-size: 40px;
+}
+
+.partsTitle {
+    font-size: 40px;
+}
+.parts {
+    color:#aa0cf3;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.edit {
+    color: #ec0b87;
+}

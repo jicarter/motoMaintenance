@@ -5,6 +5,12 @@
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
       "parts": "https://www.rockymountainatvmc.com/"
+    },
+    {
+      "email": "rocketman@rocket.com",
+      "name": "Joe Joe",
+      "parts": "https://www.rockymountainatvmc.com/",
+      "id": 2
     }
   ],
   "vehicles": [
@@ -16,6 +22,24 @@
       "year": "2010",
       "notes": "REbuild 10 hrs ago",
       "timestamp": 1612720104434
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "make": "Piece of Garbage",
+      "model": "Garbage",
+      "year": "Brand new. Added hand guards and hour meter",
+      "notes": "Total Trash",
+      "timestamp": 1612721332392
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "make": "Yamaha",
+      "model": "KX 65",
+      "year": "2021",
+      "notes": "New",
+      "timestamp": 1612721459850
     }
   ],
   "maintenance": [
@@ -27,6 +51,33 @@
       "requiredItems": "oil",
       "isComplete": true,
       "timeStamp": 1612720138396
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "change the brakes",
+      "requiredItems": "Brakes // Neutron Brake Pad - Sintered Metal Fits: 2010 YAMAHA YZ250 Part# 1261170023 | Mfg Part# NA450R",
+      "isComplete": true,
+      "timeStamp": 1612721227995
+    },
+    {
+      "userId": 1,
+      "vehicleId": 3,
+      "toComplete": "this is new",
+      "requiredItems": "this works... I think",
+      "isComplete": false,
+      "timeStamp": 1612791777142,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "vehicleId": 2,
+      "toComplete": "Dropdown",
+      "requiredItems": "this is new",
+      "isComplete": false,
+      "timeStamp": 1612791951496,
+      "id": 4
     }
   ]
 }

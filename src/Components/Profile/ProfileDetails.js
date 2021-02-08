@@ -4,11 +4,18 @@ import { useHistory } from "react-router-dom"
 import { ProfileCard } from "./ProfileCard"
 import "./profile.css"
 
+
+
+//this is the overall render of the profile page which holds the card component
+
+
+
 export const ProfileDetails = () => {
     const { getProfile} = useContext(ProfileContext)
     const [profile, setProfile] = useState({});
     const history = useHistory()
 
+    //this retrieves the current user information and renders it
     useEffect(() => {
         getProfile()
         .then((response) => {

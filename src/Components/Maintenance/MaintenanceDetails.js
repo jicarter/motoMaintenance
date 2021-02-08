@@ -3,6 +3,11 @@ import { Link } from "react-router-dom"
 import { MaintenanceContext } from "./MaintenanceProvider";
 import "./Maintenance.css"
 
+
+//module is used to update maintenance by using maintenanceContext
+
+
+
 export const MaintenanceDetails = ({ maintenance, maintenanceDelete, refreshVehicle }) => {
     const { updateMaintenance } = useContext
         (MaintenanceContext)
@@ -12,7 +17,7 @@ export const MaintenanceDetails = ({ maintenance, maintenanceDelete, refreshVehi
 
 
     const handleClickComplete = (event) => {
-
+        //controls the complete button to set isComplete to true and display differently
 
         event.preventDefault()
         if (maintenance.isComplete === false) {
@@ -26,7 +31,7 @@ export const MaintenanceDetails = ({ maintenance, maintenanceDelete, refreshVehi
                 timeStamp: Date.now()
             })
                 .then(() => refreshVehicle())
-        }
+        }       //this allows the page to re-render the vehicle list to display the maintenance events as complete
     }
 
     if (maintenance.isComplete === true) {

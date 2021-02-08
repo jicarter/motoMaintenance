@@ -5,14 +5,19 @@ import { useParams, useHistory, Link } from "react-router-dom"
 import { MaintenanceDetails } from "../Maintenance/MaintenanceDetails"
 import { MaintenanceContext } from "../Maintenance/MaintenanceProvider"
 
+
+//module displays vehicles by using the card component
+
+
+
 export const VehicleDetail = () => {
   const { getVehicleById, deleteVehicle } = useContext(VehicleContext)
   const { deleteMaintenance } = useContext(MaintenanceContext)
   const [vehicle, setVehicle] = useState({})
-
   const { vehicleId } = useParams();
   const history = useHistory();
 
+  //handles the delete vehicle button using the delete vehicle fetch call
   const handleDelete = () => {
     deleteVehicle(vehicle.id)
       .then(() => {
@@ -20,6 +25,7 @@ export const VehicleDetail = () => {
       })
   }
 
+  //allows the page to re-render the page after changes are made by the user
   const refreshVehicle = () => {
     getVehicleById(vehicleId)
       .then((response) => {
@@ -29,6 +35,7 @@ export const VehicleDetail = () => {
       })
 
   }
+  //handles the delete maintenance button by using the delete maintenance fetch call
   const maintenanceDelete = (maintenanceId) => {
     deleteMaintenance(maintenanceId)
       .then(() => {
@@ -36,16 +43,18 @@ export const VehicleDetail = () => {
         refreshVehicle()
       })
   }
+
+  //renders the page
   useEffect(() => {
     console.log("useEffect", vehicleId)
     refreshVehicle()
 
   }, [])
 
-
+  //maps over the vehicles and injects each one into the HTML/JSX
   return (
     <section className="vehicle">
-       <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+      <button className="backBtn" onClick={() => history.goBack()}>Back</button>
       <h3 className="vehicle__name">{vehicle.year} {vehicle.make} {vehicle.model}</h3>
       <div className="vehicle__notes">{vehicle.notes}</div>
       <button className='edit__vehicle' onClick={() => {
