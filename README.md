@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# `Moto-Maintenance`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was designed to simplify tracking maintenance for several motorcycles/vehicles. It allows the user to add their vehicles of choice and then add scheduled maintenance events for each. It allows them to view each vehicle and it's corresponding completed and to-do maintenance events. Moto-Maintenance makes it easy to keep up with routine maintenance and even bigger tasks by providing outside resources to help complete the job. From ordering parts to watching YouTube videos to help you along, Moto-Maintenance provides all the necessary components to help take care of your vehicles. 
 
-## Available Scripts
+## `Get Started`
 
-In the project directory, you can run:
+When the user registers they are taken to the home page which provides a simple explanation of the site and quick navigation tips.
 
-### `npm start`
+### `Adding Vehicles`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once the user has navigated to the Vehicles page they are given the option to add a new vehicle by clicking the add vehicle button. Once the button is clicked the user is presented a form where they are able to fill out the necessary information to add their vehicle. They are even given the opportunity to add vehicle specific notes to help them remember important points. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+After the user finishes the form and saves the vehicle they are taken to the vehicle details page wehre they can view their vehicle information. From there they can edit or delete the vehicle. They can even add a maintenance event for that vehicle from the same page. 
 
-### `npm test`
+### `Adding Maintenance`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If the user uses the add maintenance button from the vehicle details they will be presented a form to fill out for that vehicle and it's new maintenance event. Once that event has been saved it will return the user to the vehicle details page wehre they can view the vehicle as well as the new maintenance event. The user is able to edit the event, delete the event, and even set the event as complete. After the event is set to complete it is shown in the vehicle details as completed. 
 
-### `npm run build`
+If the user navigates to the maintenance page they will be able to view all of the maintenance events they have added as well as an add maintenance button. Once the add maintenance button has been clicked they will be presented with a form to add maintenance with a dropdown to select the vehicle they wish to add the event to.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Resources`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The navigation bar at the top of the page offers some resources that will help the user complete any maintenance tasks. The links open a new tab that allows the user to remain on Moto-Maintenance while accessing the resources. There is a link to order parts, a link to provide how-to videos, a link to a vehicle database, and a link to vehicle maintenance manuals. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The navBar also includes a link to view the current users profile. Here the user has the option to change the URL for one of the outside source links to their desired URL of choice. 
