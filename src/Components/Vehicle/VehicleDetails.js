@@ -4,7 +4,7 @@ import "./Vehicle.css"
 import { useParams, useHistory, Link } from "react-router-dom"
 import { MaintenanceDetails } from "../Maintenance/MaintenanceDetails"
 import { MaintenanceContext } from "../Maintenance/MaintenanceProvider"
-
+import "../Maintenance/Maintenance.css"
 
 //module displays vehicles by using the card component
 
@@ -63,14 +63,15 @@ export const VehicleDetail = () => {
 
       <button className='deleteBtn' onClick={handleDelete}>DELETE Vehicle</button>
       <button className="mainItem"> <Link to={`../../Maintenance/create`}>Add New Maintenance</Link></button>
-      <div className="maintCards">
+      <section className="maintCards">
         {
           vehicle.maintenance?.map(m => {
             m.vehicle = vehicle
             console.log(vehicle)
             return <MaintenanceDetails key={m.id} maintenance={m} maintenanceDelete={maintenanceDelete} refreshVehicle={refreshVehicle} />
           })}
-      </div>
+      </section>
+      <section className='complete'></section>
     </section>
 
   )

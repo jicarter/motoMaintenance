@@ -61,7 +61,7 @@ export const MaintenanceForm = () => {
           isComplete: false,
           timeStamp: Date.now()
         })
-        .then(() => history.push('../'))
+        .then(() => history.push(`/vehicles/detail/${maintenance.vehicleId}`))
       }  else {
         setIsLoading(true)
         addMaintenance({
@@ -82,6 +82,7 @@ export const MaintenanceForm = () => {
       <form className="MaintenanceForm">
        <button className="backBtn" onClick={() => history.goBack()}>Back</button>
           <h2 className="MaintenanceForm__title">Enter Maintenance Event</h2>
+        <section className='container'>
           <fieldset>
               <div className="form-group-vehicle">
                   <label htmlFor="vehicle">Assign to vehicle: </label>
@@ -112,9 +113,9 @@ export const MaintenanceForm = () => {
           
           <button className="btn btn-primary"
             onClick={handleClickSaveMaintenance}>
-            Save Maintenance Event
+            {maintenance.id ? <>Update Maintenance Event</> : <>Add Maintenance Event</>}
           </button>
-          
+          </section>  
       </form>
     )
 }

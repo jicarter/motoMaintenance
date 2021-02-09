@@ -4,101 +4,100 @@
       "id": 1,
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
-      "parts": "https://www.motosport.com/"
-    },
-    {
-      "email": "rocketman@rocket.com",
-      "name": "Joe Joe",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 2
-    },
-    {
-      "email": "test@TEST.COM",
-      "name": "test test",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 3
-    },
-    {
-      "email": "jay@jay.com",
-      "name": "jay jay",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 4
+      "parts": "https://www.rockymountainatvmc.com/"
     }
   ],
   "vehicles": [
     {
-      "id": 2,
-      "userId": 2,
-      "make": "Piece of Garbage",
-      "model": "Garbage",
-      "year": "Brand new. Added hand guards and hour meter",
-      "notes": "Total Trash",
-      "timestamp": 1612721332392
-    },
-    {
-      "id": 4,
-      "userId": 3,
-      "make": "Yamaha",
-      "model": "YZ 250",
-      "year": "2010",
-      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1612798492912
-    },
-    {
-      "id": 5,
+      "id": 1,
       "userId": 1,
       "make": "Yamaha",
       "model": "YZ 250",
-      "year": "2021",
-      "notes": "Total Trash",
-      "timestamp": 1612799970968
+      "year": "2010",
+      "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
+      "timestamp": 1612902224013
     }
   ],
   "maintenance": [
     {
-      "userId": 2,
-      "vehicleId": 2,
-      "toComplete": "Dropdown",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612791951496,
-      "id": 4
-    },
-    {
-      "userId": 3,
-      "vehicleId": 4,
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "isComplete": false,
-      "timeStamp": 1612798759409,
-      "id": 5
-    },
-    {
+      "id": 2,
       "userId": 1,
-      "vehicleId": null,
+      "vehicleId": 1,
       "toComplete": "Oil Change",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612799886890,
-      "id": 6
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612904168842
     },
     {
+      "id": 3,
       "userId": 1,
-      "vehicleId": null,
+      "vehicleId": 1,
       "toComplete": "Oil Change",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612799889546,
-      "id": 7
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612904927515
     },
     {
+      "id": 4,
       "userId": 1,
-      "vehicleId": null,
+      "vehicleId": 1,
       "toComplete": "Oil Change",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612799891656,
-      "id": 8
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612904932609
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612904930515
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612905066348
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612905105294
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612907870246
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/9/2021",
+      "timeStamp": 1612908169829
     }
   ]
 }

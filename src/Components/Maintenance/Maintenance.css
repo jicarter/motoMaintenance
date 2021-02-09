@@ -23,7 +23,7 @@
       padding: 1em;
       border: 2px solid rgb(245, 28, 173);
       background-color: lightgray;
-      
+      font-size: larger;
   }
   .completedMaintenance{
       display:inline-block;
@@ -31,6 +31,7 @@
       padding: 1em;
       border: 2px solid rgb(42, 141, 11);
       background-color: lightgray;
+      font-size: larger;
       
   }
       
@@ -53,7 +54,7 @@
     background-color: dimgray;
   }
   .btn  {
-      color: #ec0b87;
+      color: #000000;
   }
 
   .addBtn {
@@ -77,10 +78,12 @@
   .form-group-vehicle {
      padding-right: 25%;
      margin-left: 25%;
+     font-size: larger;
   }
   .form-group {
      padding-right: 25%;
       margin-left: 25%;
+      font-size: larger;
   }
 
   
@@ -103,6 +106,12 @@
     justify-content: space-between;
     background-color: lightgray;
 }
+
+.container {
+  margin-left: 25%;
+  background-color: dimgray;
+  max-width: 50%;
+}
   .edit {
     justify-content: space-around;
     margin-right: 2em;
@@ -119,10 +128,10 @@
     justify-content: space-around;
     margin-right: 2em;
     color: #87f81d;
-    background-color: dimgray
+    background-color: dimgray;
   }
   .backBtn {
-    width: 25em;
+    width: 20em;
     color: rgb(33, 247, 26);
     background-color: dimgray;
   }
