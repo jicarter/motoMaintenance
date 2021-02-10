@@ -30,7 +30,7 @@ export const ProfileDetails = () => {
 
     return (
         <section className='profile'>
-            <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+            
             <section className='profile--title'>User Profile</section>
             
             <div className="profileContainer">

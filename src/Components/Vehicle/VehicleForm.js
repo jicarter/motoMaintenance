@@ -33,7 +33,7 @@ export const VehicleForm = () => {
     const year = vehicle.year
     const user = localStorage.getItem("moto_user")
 
-    if (make === "" || model === "" || year === 0) {
+    if (make === undefined || model === undefined || year === undefined) {
       window.alert("Please enter a make, model and a year")
     } else {
 
@@ -49,6 +49,7 @@ export const VehicleForm = () => {
           timestamp: Date.now()
         })
           .then(() => history.push(`/vehicles/detail/${vehicle.id}`))
+          window.alert("SAVED!")
       } else {
 
         addVehicle({
@@ -61,6 +62,7 @@ export const VehicleForm = () => {
           timestamp: Date.now()
         })
           .then(() => history.push('./'))
+          window.alert("SAVED!")
       }
 
     }
@@ -84,29 +86,29 @@ export const VehicleForm = () => {
   return (
     <section className='mainVehicleForm'>
       <form className="vehicleForm">
-        <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+        <button className="backBtn" onClick={() => history.goBack()}>Cancel</button>
         <h2 className="vehicleForm__title">{vehicleId ? <>Edit Vehicle</> : <>Add Vehicle</>}</h2>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="make"> Make:</label>
+            <label className='vehicleLabel' htmlFor="make"> Make:</label>
             <input type="text" id="make" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Make" value={vehicle.make} />
           </div>
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="model"> Model:</label>
+            <label className='vehicleLabel' htmlFor="model"> Model:</label>
             <input type="text" id="model" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Model" value={vehicle.model} />
           </div>
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="year"> Year:</label>
+            <label className='vehicleLabel' htmlFor="year"> Year:</label>
             <input type="text" id="year" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Year" value={vehicle.year} />
           </div>
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="notes"> Notes:</label>
+            <label className='vehicleLabel' htmlFor="notes"> Notes:</label>
             <input type="text" id="notes" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Notes" value={vehicle.notes} />
           </div>
         </fieldset>
@@ -116,6 +118,7 @@ export const VehicleForm = () => {
           onClick={event => {
             event.preventDefault() // Prevent browser from submitting the form and refreshing the page
             handleSaveVehicle()
+            
           }}>
           Save Vehicle
             </button>

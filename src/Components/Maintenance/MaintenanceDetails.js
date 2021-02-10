@@ -31,6 +31,7 @@ export const MaintenanceDetails = ({ maintenance, maintenanceDelete, refreshVehi
         timeStamp: Date.now()
       })
         .then(() => refreshVehicle())
+        window.alert("COMPLETED!")
 
     }       //this allows the page to re-render the vehicle list to display the maintenance events as complete
   }

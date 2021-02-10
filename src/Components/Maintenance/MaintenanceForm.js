@@ -60,17 +60,18 @@ export const MaintenanceForm = () => {
 
       const user = localStorage.getItem("moto_user")
       //if there is an exsisting ID then the form edits, if ther is no ID then it creates new
-      if (maintenanceId || vehicleId) {
+      if (maintenanceId) {
         updateMaintenance({
           id: parseInt(maintenance.id),
           userId: parseInt(user),
-          vehicleId: parseInt(vehicleId ? vehicleId : maintenance.vehicleId),
+          vehicleId: parseInt(maintenance.vehicleId),
           toComplete: maintenance.toComplete,
           requiredItems: maintenance.requiredItems,
           isComplete: false,
           timeStamp: Date.now()
         })
           .then(() => history.push(`/vehicles/detail/${maintenance.vehicleId}`))
+          window.alert("SAVED!")
       } else {
         setIsLoading(true)
         addMaintenance({
@@ -83,6 +84,7 @@ export const MaintenanceForm = () => {
 
         })
           .then(() => history.push(`/vehicles/detail/${vehicleId ? vehicleId : maintenance.vehicleId}`))
+          window.alert("SAVED!")
       }
     }
   }
@@ -92,7 +94,7 @@ export const MaintenanceForm = () => {
 
     return (
       <section className='container'>
-        <h2 className="MaintenanceForm__title">{maintenanceId ? <>Edit Maintenance Event</> : <>Add New Maintenance Event</>}</h2>
+        <h2 className="VehicleMaintenanceForm">{maintenanceId ? <>Edit Maintenance Event</> : <>Add New Maintenance Event</>}</h2>
         <h3 className="vehicleName">{vehicle.year} {vehicle.make} {vehicle.model}</h3>
         <input className="vehicleId" name='vehicleId' type='hidden' id='vehicleId' value={vehicleId} ></input>
         <fieldset>
@@ -109,7 +111,7 @@ export const MaintenanceForm = () => {
         </fieldset>
         <button className="addMainBtn"
           onClick={handleClickSaveMaintenance}>
-         {maintenanceId ? <>Edit Maintenance Event</> : <>Add New Maintenance Event</>}
+          Submit
         </button>
         <button className="cancel" onClick={() => history.goBack()}>Cancel</button>
 
@@ -121,7 +123,7 @@ export const MaintenanceForm = () => {
   } else {
     return (
       <form className="MaintenanceForm">
-        <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+        <button className="backBtn" onClick={() => history.goBack()}>Cancel</button>
         <h2 className="MaintenanceForm__title">Add New Maintenance Event</h2>
         <section className='container'>
           <fieldset>

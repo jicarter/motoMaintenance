@@ -20,7 +20,7 @@ export const VehicleList = () => {
 
   return (
     <section className="vehicles">
-      <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+      
       <section className='vehicle--title'>Vehicles</section>
       <button className="addBtn" onClick={() => { history.push("/vehicles/create") }}>
         Add Vehicle
