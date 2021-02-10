@@ -1,5 +1,4 @@
-.vehicles {
-   
+.vehicles {   
     text-align: center;
     background-position-x: center;
     background-image: url(vehicleBackground.jpg);
@@ -10,25 +9,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: rgb(99, 97, 97);
   }
   .vehicleContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+   justify-content: space-between;
+    padding-right: 25%;
+    padding-left: 25%;
   }
 
   .vehicle {
-      
+      font-size: larger;
       margin: 1em;
       padding: 1em;
       border: 2px solid rgb(245, 28, 173);
-      
       background-color: lightgray;
-     
-      
-    
-  }
+     }
   .vehicle--title {
       color:#ec0b87;
       font-size: 75px;
@@ -66,8 +61,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  .vehicleForm {
+  .mainVehicleForm {
     text-align: center;
     background-position-x: center;
     background-image: url(vehicleBackground.jpg);
@@ -78,7 +72,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: rgb(99, 97, 97);
+  }
+  
+  label {
+    color: rgb(86, 159, 255);
+    background-color: rgb(0, 0, 0);
   }
 
   .vehicle__name {
@@ -130,4 +129,8 @@
     width: 25em;
     color: rgb(33, 247, 26);
     background-color: dimgray;
+  }
+
+  .complete {
+    
   }

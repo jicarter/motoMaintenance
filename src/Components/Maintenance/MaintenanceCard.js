@@ -10,7 +10,7 @@ export const MaintenanceCard = ({ maintenance }) => {
   if (maintenance.isComplete === true) {
     return (
 
-      <section hidden>
+      <section className='complete'hidden>
         <h3 className='name'>
           Completed Maintenance
           </h3>
@@ -21,7 +21,7 @@ export const MaintenanceCard = ({ maintenance }) => {
   } else {
     return (
       <section className='maintenanceCard'>
-        <h3 className='vehicleName'>
+        <h3 className='vehicle-Name'>
           <Link to={`/vehicles/detail/${maintenance.vehicle.id}`}>{maintenance.vehicle.year} {maintenance.vehicle.make} {maintenance.vehicle.model}</Link>
         </h3>
         <div className="toComplete"> {maintenance.toComplete} </div>

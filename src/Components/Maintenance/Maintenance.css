@@ -9,7 +9,7 @@
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: rgb(223, 221, 221);
     
   }
   .maintCards {
@@ -23,7 +23,7 @@
       padding: 1em;
       border: 2px solid rgb(245, 28, 173);
       background-color: lightgray;
-      
+      font-size: larger;
   }
   .completedMaintenance{
       display:inline-block;
@@ -31,7 +31,13 @@
       padding: 1em;
       border: 2px solid rgb(42, 141, 11);
       background-color: lightgray;
+      font-size: larger;
       
+  }
+
+  .dateCompleted {
+    font-size: 30px;
+    color:rgb(243, 23, 8);
   }
       
 
@@ -45,7 +51,7 @@
       color:#ec0b87;
       font-size: 75px;
       text-decoration: underline;
-      
+      margin-left: 25%;
   }
   
   .addMtnBtn {
@@ -53,7 +59,7 @@
     background-color: dimgray;
   }
   .btn  {
-      color: #ec0b87;
+      color: #000000;
   }
 
   .addBtn {
@@ -77,10 +83,12 @@
   .form-group-vehicle {
      padding-right: 25%;
      margin-left: 25%;
+     font-size: larger;
   }
   .form-group {
      padding-right: 25%;
       margin-left: 25%;
+      font-size: larger;
   }
 
   
@@ -102,6 +110,13 @@
     background-repeat: no-repeat;
     justify-content: space-between;
     background-color: lightgray;
+    align-content: center;
+}
+
+.container {
+ 
+  background-color: dimgray;
+  
 }
   .edit {
     justify-content: space-around;
@@ -119,10 +134,31 @@
     justify-content: space-around;
     margin-right: 2em;
     color: #87f81d;
-    background-color: dimgray
+    background-color: dimgray;
   }
   .backBtn {
-    width: 25em;
+    width: 20em;
     color: rgb(33, 247, 26);
     background-color: dimgray;
   }
+
+  .vehicleName {
+    color: #0a0a0a;
+    font-size: 50px;
+    padding-left: 30%;
+  }
+
+  .addMainBtn {
+    color: #000000;
+    background-color: rgb(202, 202, 202);
+    margin-left: 25%;
+    margin-top: 5em;
+    margin-bottom: 10em;
+  }
+
+  .cancel {
+    color: #000000;
+    background-color: rgb(202, 202, 202);
+    margin-left: 25%;
+  }
+    

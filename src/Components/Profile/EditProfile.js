@@ -65,7 +65,7 @@ export const EditProfileForm = () => {
 
         <form>
             <label form="parts">Add your own parts page</label>
-            <input type="url" id="parts" name="parts" onChange={handleControlledInputChange} required autoFocus className="form-control"></input>
+            <input type="url" id="parts" name="parts" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder={profile.parts}></input>
             <button className="btn btn-primary"
                 onClick={handleClickSaveProfile}>
                 Save Changes

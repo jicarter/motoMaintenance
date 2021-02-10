@@ -5,100 +5,76 @@
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
       "parts": "https://www.motosport.com/"
-    },
-    {
-      "email": "rocketman@rocket.com",
-      "name": "Joe Joe",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 2
-    },
-    {
-      "email": "test@TEST.COM",
-      "name": "test test",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 3
-    },
-    {
-      "email": "jay@jay.com",
-      "name": "jay jay",
-      "parts": "https://www.rockymountainatvmc.com/",
-      "id": 4
     }
   ],
   "vehicles": [
     {
-      "id": 2,
-      "userId": 2,
-      "make": "Piece of Garbage",
-      "model": "Garbage",
-      "year": "Brand new. Added hand guards and hour meter",
-      "notes": "Total Trash",
-      "timestamp": 1612721332392
-    },
-    {
-      "id": 4,
-      "userId": 3,
-      "make": "Yamaha",
-      "model": "YZ 250",
-      "year": "2010",
-      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1612798492912
-    },
-    {
-      "id": 5,
+      "id": 1,
       "userId": 1,
       "make": "Yamaha",
       "model": "YZ 250",
-      "year": "2021",
-      "notes": "Total Trash",
-      "timestamp": 1612799970968
+      "year": "2010",
+      "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
+      "timestamp": 1612968628401
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "make": "Kawasaki",
+      "model": "KX 65",
+      "year": "2005",
+      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
+      "timestamp": 1612970361270
     }
   ],
   "maintenance": [
     {
-      "userId": 2,
-      "vehicleId": 2,
+      "id": 1,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612982902132
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "vehicleId": 1,
       "toComplete": "Dropdown",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612791951496,
-      "id": 4
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612982904413
     },
     {
-      "userId": 3,
-      "vehicleId": 4,
-      "toComplete": "Oil Change",
-      "requiredItems": "oil",
-      "isComplete": false,
-      "timeStamp": 1612798759409,
-      "id": 5
-    },
-    {
+      "id": 3,
       "userId": 1,
-      "vehicleId": null,
-      "toComplete": "Oil Change",
-      "requiredItems": "this is new",
+      "vehicleId": 1,
+      "toComplete": "this sux",
+      "requiredItems": "this and that",
       "isComplete": false,
-      "timeStamp": 1612799886890,
-      "id": 6
+      "timeStamp": 1612984027673
     },
     {
+      "id": 4,
       "userId": 1,
-      "vehicleId": null,
-      "toComplete": "Oil Change",
-      "requiredItems": "this is new",
+      "vehicleId": 2,
+      "toComplete": "this is new",
+      "requiredItems": "this works... I think",
       "isComplete": false,
-      "timeStamp": 1612799889546,
-      "id": 7
+      "timeStamp": 1612983746582
     },
     {
+      "id": 5,
       "userId": 1,
-      "vehicleId": null,
+      "vehicleId": 2,
       "toComplete": "Oil Change",
-      "requiredItems": "this is new",
-      "isComplete": false,
-      "timeStamp": 1612799891656,
-      "id": 8
+      "requiredItems": "oil Needs to be done before next ride",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612983586652
     }
   ]
 }

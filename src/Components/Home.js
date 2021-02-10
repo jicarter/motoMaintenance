@@ -7,7 +7,7 @@ import "./Home.css"
 
 export const Home = () => (
     <section className="home">
-        <section className="container">
+        <section className="homeContainer">
             <div className='title'>Moto-Maintenance</div>
             <div className='slogan'>For all of your Maintenance Needs!</div>
             <div className='intro'>Start by adding a vehicle under the vehicle tab. </div>
