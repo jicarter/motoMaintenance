@@ -26,7 +26,7 @@ export const MaintenanceList = () => {
 
   return (
     <section className="maintenance">
-      <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+      
 
       {console.log("MaintenanceList:Render", maintenance)}
       <h2>Maintenance</h2>

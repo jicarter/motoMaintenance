@@ -16,7 +16,7 @@ export const VehicleDetail = () => {
   const [vehicle, setVehicle] = useState({})
   const { vehicleId } = useParams();
   const history = useHistory();
-  const complete = maintenance.isComplete
+  
   //handles the delete vehicle button using the delete vehicle fetch call
   const handleDelete = () => {
     deleteVehicle(vehicle.id)
@@ -54,7 +54,7 @@ export const VehicleDetail = () => {
   //maps over the vehicles and injects each one into the HTML/JSX
   return (
     <section className="vehicle">
-      <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+      
       <h3 className="vehicle__name">{vehicle.year} {vehicle.make} {vehicle.model}</h3>
       <div className="vehicle__notes">{vehicle.notes}</div>
       <button className='edit__vehicle' onClick={() => {
@@ -68,7 +68,7 @@ export const VehicleDetail = () => {
           vehicle.maintenance?.map(m => {
             m.vehicle = vehicle
             console.log(vehicle)
-            return <MaintenanceDetails key={m.id} maintenance={m} maintenanceDelete={maintenanceDelete} refreshVehicle={refreshVehicle} complete={false} />
+            return <MaintenanceDetails key={m.id} maintenance={m} maintenanceDelete={maintenanceDelete} refreshVehicle={refreshVehicle} />
           })}
       </section>
       <section className='complete'>

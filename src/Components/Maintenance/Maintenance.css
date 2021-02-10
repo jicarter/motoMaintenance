@@ -51,7 +51,14 @@
       color:#ec0b87;
       font-size: 75px;
       text-decoration: underline;
-      margin-left: 25%;
+     
+  }
+
+  .VehicleMaintenanceForm {
+    color:#ec0b87;
+      font-size: 75px;
+      text-decoration: underline;
+      margin-left: 20%;
   }
   
   .addMtnBtn {
