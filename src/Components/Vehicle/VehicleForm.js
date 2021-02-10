@@ -82,42 +82,44 @@ export const VehicleForm = () => {
   }, [])
 
   return (
-    <form className="vehicleForm">
-      <button className="backBtn" onClick={() => history.goBack()}>Back</button>
-      <h2 className="vehicleForm__title">Enter Your Info</h2>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="make"> Make:</label>
-          <input type="text" id="make" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Make" value={vehicle.make} />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="model"> Model:</label>
-          <input type="text" id="model" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Model" value={vehicle.model} />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="year"> Year:</label>
-          <input type="text" id="year" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Year" value={vehicle.year} />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="notes"> Notes:</label>
-          <input type="text" id="notes" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Notes" value={vehicle.notes} />
-        </div>
-      </fieldset>
+    <section className='mainVehicleForm'>
+      <form className="vehicleForm">
+        <button className="backBtn" onClick={() => history.goBack()}>Back</button>
+        <h2 className="vehicleForm__title">{vehicleId ? <>Edit Vehicle</> : <>Add Vehicle</>}</h2>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="make"> Make:</label>
+            <input type="text" id="make" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Make" value={vehicle.make} />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="model"> Model:</label>
+            <input type="text" id="model" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Model" value={vehicle.model} />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="year"> Year:</label>
+            <input type="text" id="year" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Year" value={vehicle.year} />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="notes"> Notes:</label>
+            <input type="text" id="notes" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle Notes" value={vehicle.notes} />
+          </div>
+        </fieldset>
 
-      <button className="btn btn-primary"
-        disabled={isLoading}
-        onClick={event => {
-          event.preventDefault() // Prevent browser from submitting the form and refreshing the page
-          handleSaveVehicle()
-        }}>
-        Save Vehicle
+        <button className="btn btn-primary"
+          disabled={isLoading}
+          onClick={event => {
+            event.preventDefault() // Prevent browser from submitting the form and refreshing the page
+            handleSaveVehicle()
+          }}>
+          Save Vehicle
             </button>
-    </form>
+      </form>
+    </section>
   )
 } 

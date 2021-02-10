@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
-      "parts": "https://www.rockymountainatvmc.com/"
+      "parts": "https://www.motosport.com/"
     }
   ],
   "vehicles": [
@@ -15,89 +15,66 @@
       "model": "YZ 250",
       "year": "2010",
       "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
-      "timestamp": 1612902224013
+      "timestamp": 1612968628401
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "make": "Kawasaki",
+      "model": "KX 65",
+      "year": "2005",
+      "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
+      "timestamp": 1612970361270
     }
   ],
   "maintenance": [
     {
-      "id": 2,
+      "id": 1,
       "userId": 1,
       "vehicleId": 1,
       "toComplete": "Oil Change",
       "requiredItems": "this and that",
       "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612904168842
+      "completed": "2/10/2021",
+      "timeStamp": 1612982902132
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Dropdown",
+      "requiredItems": "this and that",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612982904413
     },
     {
       "id": 3,
       "userId": 1,
       "vehicleId": 1,
-      "toComplete": "Oil Change",
+      "toComplete": "this sux",
       "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612904927515
+      "isComplete": false,
+      "timeStamp": 1612984027673
     },
     {
       "id": 4,
       "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612904932609
+      "vehicleId": 2,
+      "toComplete": "this is new",
+      "requiredItems": "this works... I think",
+      "isComplete": false,
+      "timeStamp": 1612983746582
     },
     {
       "id": 5,
       "userId": 1,
-      "vehicleId": 1,
+      "vehicleId": 2,
       "toComplete": "Oil Change",
-      "requiredItems": "this and that",
+      "requiredItems": "oil Needs to be done before next ride",
       "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612904930515
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612905066348
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612905105294
-    },
-    {
-      "id": 8,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612907870246
-    },
-    {
-      "id": 9,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/9/2021",
-      "timeStamp": 1612908169829
+      "completed": "2/10/2021",
+      "timeStamp": 1612983586652
     }
   ]
 }

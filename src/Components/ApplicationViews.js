@@ -15,7 +15,7 @@ import { EditProfileForm } from "./Profile/EditProfile";
 export const ApplicationViews = () => {
     return (
         <>
-            
+
             <Route exact path="/">
                 <Home />
             </Route>
@@ -27,14 +27,14 @@ export const ApplicationViews = () => {
                     </Route>
                     <Route path="/vehicles/create">
                         <VehicleForm />
-                    </Route>  
+                    </Route>
                     <Route path="/vehicles/edit/:vehicleId(\d+)">
                         <VehicleForm />
                     </Route>
                     <Route path="/vehicles/detail/:vehicleId(\d+)">
                         <VehicleDetail />
-                        
-                    </Route>  
+                    
+                    </Route>
                 </MaintenanceProvider>
             </VehicleProvider>
 
@@ -43,7 +43,7 @@ export const ApplicationViews = () => {
                     <Route exact path="/maintenance">
                         <MaintenanceList />
                     </Route>
-                    <Route path="/maintenance/create">
+                    <Route path="/maintenance/create/:vehicleId(\d+)?">
                         <MaintenanceForm />
                     </Route>
                     <Route path="/maintenance/edit/:maintenanceId(\d+)">
@@ -64,7 +64,6 @@ export const ApplicationViews = () => {
                     <EditProfileForm />
                 </Route>
             </ProfileProvider>
-            </>
+        </>
     )
-}    
-                    
+}

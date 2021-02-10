@@ -9,7 +9,7 @@
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: rgb(223, 221, 221);
     
   }
   .maintCards {
@@ -34,6 +34,11 @@
       font-size: larger;
       
   }
+
+  .dateCompleted {
+    font-size: 30px;
+    color:rgb(243, 23, 8);
+  }
       
 
   .cardContainer {
@@ -46,7 +51,7 @@
       color:#ec0b87;
       font-size: 75px;
       text-decoration: underline;
-      
+      margin-left: 25%;
   }
   
   .addMtnBtn {
@@ -105,12 +110,13 @@
     background-repeat: no-repeat;
     justify-content: space-between;
     background-color: lightgray;
+    align-content: center;
 }
 
 .container {
-  margin-left: 25%;
+ 
   background-color: dimgray;
-  max-width: 50%;
+  
 }
   .edit {
     justify-content: space-around;
@@ -135,3 +141,24 @@
     color: rgb(33, 247, 26);
     background-color: dimgray;
   }
+
+  .vehicleName {
+    color: #0a0a0a;
+    font-size: 50px;
+    padding-left: 30%;
+  }
+
+  .addMainBtn {
+    color: #000000;
+    background-color: rgb(202, 202, 202);
+    margin-left: 25%;
+    margin-top: 5em;
+    margin-bottom: 10em;
+  }
+
+  .cancel {
+    color: #000000;
+    background-color: rgb(202, 202, 202);
+    margin-left: 25%;
+  }
+    

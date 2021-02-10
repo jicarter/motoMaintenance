@@ -12,11 +12,11 @@ import "../Maintenance/Maintenance.css"
 
 export const VehicleDetail = () => {
   const { getVehicleById, deleteVehicle } = useContext(VehicleContext)
-  const { deleteMaintenance } = useContext(MaintenanceContext)
+  const { maintenance, deleteMaintenance } = useContext(MaintenanceContext)
   const [vehicle, setVehicle] = useState({})
   const { vehicleId } = useParams();
   const history = useHistory();
-
+  const complete = maintenance.isComplete
   //handles the delete vehicle button using the delete vehicle fetch call
   const handleDelete = () => {
     deleteVehicle(vehicle.id)
@@ -62,16 +62,18 @@ export const VehicleDetail = () => {
       }}>Edit Vehicle</button>
 
       <button className='deleteBtn' onClick={handleDelete}>DELETE Vehicle</button>
-      <button className="mainItem"> <Link to={`../../Maintenance/create`}>Add New Maintenance</Link></button>
+      <button className="mainItem"> <Link to={`../../Maintenance/create/${vehicle.id}`}>Add New Maintenance</Link></button>
       <section className="maintCards">
         {
           vehicle.maintenance?.map(m => {
             m.vehicle = vehicle
             console.log(vehicle)
-            return <MaintenanceDetails key={m.id} maintenance={m} maintenanceDelete={maintenanceDelete} refreshVehicle={refreshVehicle} />
+            return <MaintenanceDetails key={m.id} maintenance={m} maintenanceDelete={maintenanceDelete} refreshVehicle={refreshVehicle} complete={false} />
           })}
       </section>
-      <section className='complete'></section>
+      <section className='complete'>
+
+      </section>
     </section>
 
   )
