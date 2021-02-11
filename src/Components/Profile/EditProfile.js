@@ -74,6 +74,7 @@ export const EditProfileForm = () => {
                 onClick={handleClickSaveDefault}>
                 Reset to Default
           </button>
+          <button className="cancel" onClick={() => history.goBack()}>Cancel</button>
         </form>
     )
 }

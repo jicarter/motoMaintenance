@@ -60,35 +60,38 @@ export const MaintenanceForm = () => {
 
       const user = localStorage.getItem("moto_user")
       //if there is an exsisting ID then the form edits, if ther is no ID then it creates new
-      if (maintenanceId) {
-        updateMaintenance({
-          id: parseInt(maintenance.id),
-          userId: parseInt(user),
-          vehicleId: parseInt(maintenance.vehicleId),
-          toComplete: maintenance.toComplete,
-          requiredItems: maintenance.requiredItems,
-          isComplete: false,
-          timeStamp: Date.now()
-        })
-          .then(() => history.push(`/vehicles/detail/${maintenance.vehicleId}`))
-          window.alert("SAVED!")
+      if (maintenance.toComplete === undefined || maintenance.requiredItems === undefined) {
+        window.alert("Looks like you forgot a field!")
       } else {
-        setIsLoading(true)
-        addMaintenance({
-          userId: parseInt(user),
-          vehicleId: parseInt(vehicleId ? vehicleId : maintenance.vehicleId),
-          toComplete: maintenance.toComplete,
-          requiredItems: maintenance.requiredItems,
-          isComplete: false,
-          timeStamp: Date.now()
-
-        })
-          .then(() => history.push(`/vehicles/detail/${vehicleId ? vehicleId : maintenance.vehicleId}`))
+        if (maintenanceId) {
+          updateMaintenance({
+            id: parseInt(maintenance.id),
+            userId: parseInt(user),
+            vehicleId: parseInt(maintenance.vehicleId),
+            toComplete: maintenance.toComplete,
+            requiredItems: maintenance.requiredItems,
+            isComplete: false,
+            timeStamp: Date.now()
+          })
+            .then(() => history.push(`/vehicles/detail/${maintenance.vehicleId}`))
           window.alert("SAVED!")
+        } else {
+          setIsLoading(true)
+          addMaintenance({
+            userId: parseInt(user),
+            vehicleId: parseInt(vehicleId ? vehicleId : maintenance.vehicleId),
+            toComplete: maintenance.toComplete,
+            requiredItems: maintenance.requiredItems,
+            isComplete: false,
+            timeStamp: Date.now()
+
+          })
+            .then(() => history.push(`/vehicles/detail/${vehicleId ? vehicleId : maintenance.vehicleId}`))
+          window.alert("SAVED!")
+        }
       }
     }
   }
-
 
   if (vehicleId || maintenanceId) {
 
@@ -114,16 +117,12 @@ export const MaintenanceForm = () => {
           Submit
         </button>
         <button className="cancel" onClick={() => history.goBack()}>Cancel</button>
-
-
-
       </section>
 
     )
   } else {
     return (
       <form className="MaintenanceForm">
-        <button className="backBtn" onClick={() => history.goBack()}>Cancel</button>
         <h2 className="MaintenanceForm__title">Add New Maintenance Event</h2>
         <section className='container'>
           <fieldset>
@@ -151,13 +150,11 @@ export const MaintenanceForm = () => {
               <input type="text" id="requiredItems" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Required Items" value={maintenance.requiredItems} />
             </div>
           </fieldset>
-
-
-
           <button className="btn btn-primary"
             onClick={handleClickSaveMaintenance}>
             Add Maintenance Event
           </button>
+          <button className="backBtn" onClick={() => history.goBack()}>Cancel</button>
         </section>
       </form>
     )

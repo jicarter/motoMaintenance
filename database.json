@@ -5,6 +5,12 @@
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
       "parts": "https://www.rockymountainatvmc.com/"
+    },
+    {
+      "id": 2,
+      "name": "Max Payne",
+      "email": "killer@aol.com",
+      "parts": "https://www.rockymountainatvmc.com/parts/2010-yamaha-yz250?v=8999"
     }
   ],
   "vehicles": [
@@ -15,16 +21,16 @@
       "model": "YZ 250",
       "year": "2010",
       "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
-      "timestamp": 1612990193225
+      "timestamp": 1612990942344
     },
     {
       "id": 2,
-      "userId": 1,
-      "make": "Kawasaki",
-      "model": "KX 65",
-      "year": "2005",
+      "userId": 2,
+      "make": "Yamaha",
+      "model": "YZ 250",
+      "year": "2010",
       "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
-      "timestamp": 1612970361270
+      "timestamp": 1613074705865
     }
   ],
   "maintenance": [
@@ -87,6 +93,75 @@
       "isComplete": true,
       "completed": "2/10/2021",
       "timeStamp": 1612990266005
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "this is new",
+      "requiredItems": "this is new",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612990994067
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Dropdown",
+      "requiredItems": "this is new",
+      "isComplete": true,
+      "completed": "2/10/2021",
+      "timeStamp": 1612991006857
+    },
+    {
+      "id": 9,
+      "userId": 2,
+      "vehicleId": 2,
+      "toComplete": "Oil Change",
+      "requiredItems": "oil Needs to be changed soon",
+      "isComplete": true,
+      "completed": "2/11/2021",
+      "timeStamp": 1613057837989
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "vehicleId": 2,
+      "toComplete": "Air filter",
+      "requiredItems": "https://www.rockymountainatvmc.com/parts/twin-air-pre-oiled-air-filter-p?v=8999",
+      "isComplete": true,
+      "completed": "2/11/2021",
+      "timeStamp": 1613071065806
+    },
+    {
+      "id": 11,
+      "userId": 2,
+      "vehicleId": 2,
+      "toComplete": "Oil Change / air filter check",
+      "requiredItems": "Oil, air filter oil",
+      "isComplete": true,
+      "completed": "2/11/2021",
+      "timeStamp": 1613074552927
+    },
+    {
+      "id": 12,
+      "userId": 2,
+      "vehicleId": 2,
+      "toComplete": "Oil Change / air filter check",
+      "requiredItems": "Oil, air filter oil",
+      "isComplete": true,
+      "completed": "2/11/2021",
+      "timeStamp": 1613074886105
+    },
+    {
+      "userId": 1,
+      "vehicleId": 1,
+      "toComplete": "Oil Change / air filter check",
+      "requiredItems": "Oil",
+      "isComplete": false,
+      "timeStamp": 1613077783184,
+      "id": 13
     }
   ]
 }

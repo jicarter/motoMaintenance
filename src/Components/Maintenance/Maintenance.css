@@ -144,9 +144,9 @@
     background-color: dimgray;
   }
   .backBtn {
-    width: 20em;
-    color: rgb(33, 247, 26);
-    background-color: dimgray;
+    color: #000000;
+    background-color: rgb(202, 202, 202);
+    margin-left: 25%;
   }
 
   .vehicleName {

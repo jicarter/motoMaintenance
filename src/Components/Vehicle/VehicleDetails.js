@@ -6,6 +6,7 @@ import { MaintenanceDetails } from "../Maintenance/MaintenanceDetails"
 import { MaintenanceContext } from "../Maintenance/MaintenanceProvider"
 import "../Maintenance/Maintenance.css"
 
+
 //module displays vehicles by using the card component
 
 
@@ -23,6 +24,7 @@ export const VehicleDetail = () => {
       .then(() => {
         history.push("/vehicles")
       })
+      window.alert("DELETED!")
   }
 
   //allows the page to re-render the page after changes are made by the user
@@ -42,6 +44,7 @@ export const VehicleDetail = () => {
         console.log("this worked")
         refreshVehicle()
       })
+      window.alert("DELETED!")
   }
 
   //renders the page

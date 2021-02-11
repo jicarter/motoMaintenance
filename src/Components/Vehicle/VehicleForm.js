@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { VehicleContext } from "../Vehicle/VehicleProvider"
 import "./Vehicle.css"
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Link } from 'react-router-dom';
 
 //renders the forms to add, edit vehicles
 
@@ -86,7 +86,6 @@ export const VehicleForm = () => {
   return (
     <section className='mainVehicleForm'>
       <form className="vehicleForm">
-        <button className="backBtn" onClick={() => history.goBack()}>Cancel</button>
         <h2 className="vehicleForm__title">{vehicleId ? <>Edit Vehicle</> : <>Add Vehicle</>}</h2>
         <fieldset>
           <div className="form-group">
@@ -113,7 +112,7 @@ export const VehicleForm = () => {
           </div>
         </fieldset>
 
-        <button className="btn btn-primary"
+        <button className="saveBtn"
           disabled={isLoading}
           onClick={event => {
             event.preventDefault() // Prevent browser from submitting the form and refreshing the page
@@ -122,6 +121,7 @@ export const VehicleForm = () => {
           }}>
           Save Vehicle
             </button>
+            <button className='cancel'> <Link to={`/vehicles`}>Cancel</Link></button>
       </form>
     </section>
   )

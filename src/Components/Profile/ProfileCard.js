@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 
 
 //this renders the user profile information by injecting it into HTML via JSX
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 
 export const ProfileCard = ({ user }) => {
-
+    
     console.log(user)
 
 
@@ -20,6 +20,8 @@ export const ProfileCard = ({ user }) => {
             <div className="partsTitle">Preferred Parts Site:</div>
             <div className="parts">{user?.parts}</div>
             <button className='edit'> <Link to={`/profile/edit/${user.id}`}>Edit</Link></button>
+            <button className='back'> <Link to={`/`}>Back</Link></button>
+            
         </section>
 
     )
