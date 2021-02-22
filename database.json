@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Jordan Carter",
       "email": "jordan.carter.0023@gmail.com",
-      "parts": "https://www.rockymountainatvmc.com/"
+      "parts": "https://www.motosport.com/"
     },
     {
       "id": 2,
@@ -15,15 +15,6 @@
   ],
   "vehicles": [
     {
-      "id": 1,
-      "userId": 1,
-      "make": "Yamaha",
-      "model": "YZ 250",
-      "year": "2010",
-      "notes": "Complete Rebuild - currently at break in hrs(10) - use Rotella 10w30 ",
-      "timestamp": 1612990942344
-    },
-    {
       "id": 2,
       "userId": 2,
       "make": "Yamaha",
@@ -31,89 +22,39 @@
       "year": "2010",
       "notes": "Uses Rotella 10w30, change oil frequently, new top end 10 hours ago",
       "timestamp": 1613074705865
-    }
-  ],
-  "maintenance": [
-    {
-      "id": 1,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612987374411
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612987375673
     },
     {
       "id": 3,
       "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612987376793
+      "make": "Suzuki",
+      "model": "RM250",
+      "year": "2004",
+      "notes": "The Best",
+      "imageURL": "https://res.cloudinary.com/moto-maintenance/image/upload/v1614008204/moto-maintenance/o9t3n3hxzsqerhmy8hkt.jpg",
+      "timestamp": 1614008235313
     },
     {
       "id": 4,
       "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612987379480
+      "make": "Yamaha",
+      "model": "YZ 250",
+      "year": "2010",
+      "notes": "New top end 10hrs ago",
+      "imageURL": "https://res.cloudinary.com/moto-maintenance/image/upload/v1614008509/moto-maintenance/adoiyzoqfd3wdhemmqjh.jpg",
+      "timestamp": 1614009046701
     },
     {
       "id": 5,
       "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "this is new",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612987378042
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change",
-      "requiredItems": "this and that",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612990266005
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "this is new",
-      "requiredItems": "this is new",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612990994067
-    },
-    {
-      "id": 8,
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Dropdown",
-      "requiredItems": "this is new",
-      "isComplete": true,
-      "completed": "2/10/2021",
-      "timeStamp": 1612991006857
-    },
+      "make": "Kawasaki",
+      "model": "KX 65",
+      "year": "2005",
+      "notes": "checking the piston and rings after 10hrs",
+      "imageURL": "https://res.cloudinary.com/moto-maintenance/image/upload/v1614008898/moto-maintenance/shasa5ixq5f5t7xpeuq8.jpg",
+      "timestamp": 1614008919206
+    }
+  ],
+  "maintenance": [
     {
       "id": 9,
       "userId": 2,
@@ -153,15 +94,6 @@
       "isComplete": true,
       "completed": "2/11/2021",
       "timeStamp": 1613074886105
-    },
-    {
-      "userId": 1,
-      "vehicleId": 1,
-      "toComplete": "Oil Change / air filter check",
-      "requiredItems": "Oil",
-      "isComplete": false,
-      "timeStamp": 1613077783184,
-      "id": 13
     }
   ]
 }

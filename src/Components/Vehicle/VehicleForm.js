@@ -4,14 +4,26 @@ import "./Vehicle.css"
 import { useHistory, useParams, Link } from 'react-router-dom';
 
 //renders the forms to add, edit vehicles
-
+const user = localStorage.getItem("moto_user")
 
 export const VehicleForm = () => {
   const { addVehicle, updateVehicle, getVehicleById } = useContext(VehicleContext)
-  const [vehicle, setVehicle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { vehicleId } = useParams()
   const history = useHistory();
+  const [loading, setLoading] = useState(false)
+  const [imageURL, setImageURL] = useState("")
+  const [vehicle, setVehicle] = useState({
+    id: "",
+    userId: parseInt(user),
+    make: "",
+    model: "",
+    year: "",
+    notes:"",
+    imageURL: ""
+  });
+
+
 
   //handles changes made to the dom by the user
   const handleControlledInputChange = (event) => {
@@ -23,15 +35,31 @@ export const VehicleForm = () => {
     setVehicle(newVehicle)
   }
 
-
+  const uploadImage = async e => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append("file", files[0])
+    data.append("upload_preset", "moto-maintenance")
+    setLoading(true)
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/moto-maintenance/image/upload",
+      {
+        method: "POST",
+        body: data
+      }
+    )
+    const file = await response.json()
+    setImageURL(file.secure_url)
+    setLoading(false)
+  }
   //handles the save vehicle button using the update and add fetch call
   const handleSaveVehicle = () => {
 
-
+    
     const make = vehicle.make
     const model = vehicle.model
     const year = vehicle.year
-    const user = localStorage.getItem("moto_user")
+   
 
     if (make === undefined || model === undefined || year === undefined) {
       window.alert("Please enter a make, model and a year")
@@ -46,10 +74,11 @@ export const VehicleForm = () => {
           model: vehicle.model,
           year: vehicle.year,
           notes: vehicle.notes,
+          imageURL: vehicle.imageURL,
           timestamp: Date.now()
         })
           .then(() => history.push(`/vehicles/detail/${vehicle.id}`))
-          window.alert("SAVED!")
+        window.alert("SAVED!")
       } else {
 
         addVehicle({
@@ -59,10 +88,11 @@ export const VehicleForm = () => {
           model: vehicle.model,
           year: vehicle.year,
           notes: vehicle.notes,
+          imageURL: imageURL,
           timestamp: Date.now()
         })
           .then(() => history.push('./'))
-          window.alert("SAVED!")
+        window.alert("SAVED!")
       }
 
     }
@@ -87,6 +117,15 @@ export const VehicleForm = () => {
     <section className='mainVehicleForm'>
       <form className="vehicleForm">
         <h2 className="vehicleForm__title">{vehicleId ? <>Edit Vehicle</> : <>Add Vehicle</>}</h2>
+        <div className="form-group">
+          <div>Upload Image</div>
+          <input type="file" name="file" placeholder="Upload an image" onChange={uploadImage} />
+          {loading ? (
+            <h3>Loading...</h3>
+          ) : (
+              <img src={imageURL} style={{ width: "200px" }} />
+            )}
+        </div>
         <fieldset>
           <div className="form-group">
             <label className='vehicleLabel' htmlFor="make"> Make:</label>
@@ -117,11 +156,11 @@ export const VehicleForm = () => {
           onClick={event => {
             event.preventDefault() // Prevent browser from submitting the form and refreshing the page
             handleSaveVehicle()
-            
+
           }}>
           Save Vehicle
             </button>
-            <button className='cancel'> <Link to={`/vehicles`}>Cancel</Link></button>
+        <button className='cancel'> <Link to={`/vehicles`}>Cancel</Link></button>
       </form>
     </section>
   )

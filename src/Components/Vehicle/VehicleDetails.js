@@ -59,6 +59,7 @@ export const VehicleDetail = () => {
     <section className="vehicle">
       
       <h3 className="vehicle__name">{vehicle.year} {vehicle.make} {vehicle.model}</h3>
+      <img className="image" src={vehicle.imageURL}/>
       <div className="vehicle__notes">{vehicle.notes}</div>
       <button className='edit__vehicle' onClick={() => {
         history.push(`/vehicles/edit/${vehicleId}`)
